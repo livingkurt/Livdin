@@ -68,5 +68,3 @@ __Leo__: work with mapquest API, and be able to look up any address you want.
 * [Dan Fenichel](https://github.com/danfenichel) 
 * [Leo Lopez](https://github.com/leolopez10) 
 
-
-
