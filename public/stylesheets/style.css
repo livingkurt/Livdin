@@ -17,13 +17,13 @@ html, body {
 }
 
 header {
-    font-size: 168px;
+    font-size: 100px;
     /* font-family: 'Darker Grotesque', sans-serif; */
     font-family: 'Biryani', sans-serif;
     font-family: 'Jaldi', sans-serif;
     color: #3b5d80;
     margin: 0px;
-    height: 233px;
+    height: 130px;
     /* font-family: 'Sulphur Point', sans-serif; */
 }
 
@@ -43,7 +43,7 @@ header {
 section {
     display: flex;
     justify-content: flex-start;
-    margin: 95px 262px;
+    margin: 95px 200px;
     flex-direction: column;
     border-radius: 48px;
 }
@@ -58,7 +58,7 @@ section {
 }
 
 #search_i {
-    font-size: 25px;
+    font-size: 16px;
     padding: 10px;
     width: 600px;
     border-radius: 15px;
@@ -75,6 +75,8 @@ section {
     font-family: 'Jaldi', sans-serif;
     color: #3b5d80;
     margin: 0px;
+    font-size: 75px;
+    height: 100px;
 }
 
 #profile_container_d {
@@ -107,13 +109,14 @@ section {
 
 #search_b {
     /* font-size: 33px; */
-    font-size: 25px;
+    font-size: 16px;
     padding: 10px;
-    width: 143px;
+    width: 85px;
+
     border-radius: 15px;
     color: white;
     background-color: #3b5d80;
-    border: 1px solid silver;
+    border: 1px solid #3b5d80;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -139,6 +142,7 @@ section {
     font-size: 16px;
     color: #3b5d80;
     margin-top: 0px;
+    margin-right: 10px;
     /* width: 50%; */
 }
 
@@ -203,10 +207,11 @@ section {
 
 
 #home_icon {
-    font-size: 50px;
+    font-size: 44px;
     color: white;
     text-align: center;
-    margin: 33px;
+    margin: 15px;
+
 }
 
 .nav_links {
@@ -216,7 +221,7 @@ section {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
 
 }
 
@@ -225,7 +230,7 @@ section {
     justify-content: flex-end;
     height: 100%;
     width: 100%;
-    margin: 30px;
+    margin: 15px;
   
 }
 #search_form_nav_f {
