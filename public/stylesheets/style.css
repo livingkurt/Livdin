@@ -48,6 +48,15 @@ section {
     border-radius: 48px;
 }
 
+#reviews_d {
+    border: 1px silver solid;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: #3b5d80c7;
+    margin-top: 20px;
+}
+
 #search_i {
     font-size: 25px;
     padding: 10px;
@@ -60,7 +69,7 @@ section {
 }
 
 #profile_name_h {
-    font-size: 139px;
+    /* height: 179px; */
     /* font-family: 'Darker Grotesque', sans-serif; */
     font-family: 'Biryani', sans-serif;
     font-family: 'Jaldi', sans-serif;
@@ -71,7 +80,28 @@ section {
 #profile_container_d {
     display: flex;
     flex-direction: column;
+    /* padding: 50px; */
+    /* width: 50%; */
+}
+
+#profile_section_s {
+    display: flex;
+    /* flex-direction: column; */
     padding: 50px;
+}
+
+#profile_upper_section {
+    display: flex;
+    display: row;
+
+}
+
+#image_container_d {
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 34px; */
 }
 
 
@@ -109,6 +139,7 @@ section {
     font-size: 16px;
     color: #3b5d80;
     margin-top: 0px;
+    /* width: 50%; */
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
