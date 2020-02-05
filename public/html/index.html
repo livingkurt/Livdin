@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../stylesheets/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Julius+Sans+One|Sulphur+Point&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Julius+Sans+One|Sulphur+Point&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/cc10a71280.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Biryani:900|Jaldi:700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Home</title>
 </head>
 
@@ -19,7 +21,7 @@
             <div id="right_side_nav">
                 <a class="nav_links" href="login.">Discover</a>
                 <a class="nav_links" href="#contact">Invite Friends</a>
-                <a class="nav_links" href="#about">Login</a>
+                <a class="nav_links" href="login.html">Login</a>
             </div>
 
         </div>
@@ -32,15 +34,18 @@
             <p id="description_p">
                 Find, Review and Share your Living Experiences
             </p>
-            <div>
-                <input type="text" name="" id="search_i" placeholder="Address, Neighborhood, City, County">
-            </div>
+            <form action="/search.html" id="search_form_f" autocomplete="on">
+                <input onfocus="this.placeholder = ''" type="text" name="" id="search_i"
+                    placeholder="Address, Neighborhood, City, County">
+                <button id="search_b">Search</button>
+            </form>
         </section>
 
     </main>
     <footer id="footer">
 
     </footer>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
