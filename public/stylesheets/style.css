@@ -59,6 +59,15 @@ section {
 
 }
 
+#profile_name_h {
+    font-size: 139px;
+    /* font-family: 'Darker Grotesque', sans-serif; */
+    font-family: 'Biryani', sans-serif;
+    font-family: 'Jaldi', sans-serif;
+    color: #3b5d80;
+    margin: 0px;
+}
+
 #profile_container_d {
     display: flex;
     flex-direction: column;
@@ -97,7 +106,7 @@ section {
 
 
 #description_p {
-    font-size: 30px;
+    font-size: 16px;
     color: #3b5d80;
     margin-top: 0px;
 }
