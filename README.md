@@ -68,7 +68,7 @@ Instructions on how to use our applications in the future
 
 Images of our frontend wireframe  
 
-![Home_Page_No_Auth](./public/images/Home_Page_With_Auth.png)
+![Home_Page_No_Auth](./public/images/Home_Page_with_Auth.png)
 ![Home_Page_With_Auth](./public/images/Home_Page_No_Auth.png)
 ![Search_Results](./public/images/Search_Results.png)
 ![Profile](./public/images/Profile.png)
