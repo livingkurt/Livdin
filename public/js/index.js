@@ -1,4 +1,4 @@
-const search_b_e = $("#search_b");
+// const search_b_e = $("#search_b");
 const search_i_e = $("#search_i");
 const search_form_f_e = $("#search_form_f");
 
