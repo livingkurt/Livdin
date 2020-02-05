@@ -30,5 +30,5 @@ module.exports = function(body,button,name){
             </div>
         </div>
         ${body}
-`
-}
+`;
+};

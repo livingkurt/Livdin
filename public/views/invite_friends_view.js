@@ -1,4 +1,4 @@
-module.exports = function(props){
+module.exports = function(){
     return `
     
   <footer id="footer">
@@ -11,5 +11,5 @@ module.exports = function(props){
 
 </html>
 
-`
+`;
 };

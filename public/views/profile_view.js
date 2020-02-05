@@ -43,5 +43,5 @@ module.exports = function(props){
 </body>
 
 </html>
-    `
-}
+    `;
+};

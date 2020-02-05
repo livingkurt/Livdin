@@ -1,4 +1,4 @@
-module.exports = function(props){
+module.exports = function(){
     return `
     <div class="container">
     <div class="row">
@@ -35,5 +35,5 @@ module.exports = function(props){
 
 </html>
 
-`
+`;
 };
