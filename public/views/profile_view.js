@@ -15,7 +15,7 @@ module.exports = function(props){
                 </p>
             </div>
             <div id="image_container_d">
-                <img src="https://via.placeholder.com/400" alt="">
+                <img src="https://via.placeholder.com/200" alt="">
             </div>
         </div>
         <div>
