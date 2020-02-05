@@ -2,33 +2,57 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../stylesheets/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Julius+Sans+One|Sulphur+Point&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cc10a71280.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Biryani:900|Jaldi:700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Profile</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
-      </div>
-    </div>
-  </div>
+    <div id="nav">
+        <div class="topnav">
+            <a href="index.html"><label id="home_name" style="text-decoration: none;">Livdin</label></a>
+            <form action="/search.html" id="search_form_nav_f" autocomplete="on">
+                <input onfocus="this.placeholder = ''" type="text" name="" id="search_i"
+                    placeholder="Address, Neighborhood, City, County">
+                <button id="search_b">Search</button>
+            </form>
+            <div id="right_side_nav">
+                <a class="nav_links" href="login.">Discover</a>
+                <a class="nav_links" href="#contact">Invite Friends</a>
+                <a class="nav_links" href="/logout">Logout</a>
+            </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+        </div>
+        <main id="main">
+
+            <section id="profile_section_s">
+
+                <div id="profile_container_d">
+                    <header id="profile_name_h">Kurt</header id="">
+                    <label id="joined_l" for="">Joined: Date</label>
+                    <label id="home_town_l" for="">Home Town: Town</label>
+                    <p id="description_p">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minima alias cumque temporibus
+                        numquam, rem minus corrupti sequi qui officia veniam. Ratione officia autem odio deserunt
+                        maiores rerum est ab!
+                    </p>
+                </div>
+            </section>
+
+        </main>
+        <footer id="footer">
+
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="..js/members.js"></script>
 
 </body>
 
