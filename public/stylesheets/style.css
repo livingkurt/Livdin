@@ -59,8 +59,10 @@ section {
 
 }
 
-#profile_container {
-    
+#profile_container_d {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
 }
 
 
@@ -88,10 +90,11 @@ section {
     color: #3b5d80;
 }
 
-/* #search_b :focus {
-  background-color: #3b5d80;
-  outline:0;
-}  */
+
+#joined_l, #home_town_l {
+    margin: 20px 0px;
+}
+
 
 #description_p {
     font-size: 30px;
@@ -139,21 +142,14 @@ section {
     color: #3b5d80;
 }
 
-/* Add a color to the active/current link */
-/* .topnav a.active {
-    background-color: #4CAF50;
-    border-radius: 15px;
-    color: gray;
-    /* color: white; */
-
 #profile_section_s {
     background-color: white;
     height: 100%;
 }
 
-#search_section_e {
+/* #search_section_e {
     
-}
+} */
 
 
 #home_name {
