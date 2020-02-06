@@ -135,6 +135,33 @@ form.login {
 
 }
 
+.mapbox {
+    position: relative;
+}
+
+.mapbox .overlay {
+    position: absolute;
+    top: 13px;
+    left: 58px;
+    z-index: 314159;
+    pointer-events: none;
+}
+
+.mapbox .overlay .btn {
+    pointer-events: initial;
+}
+
+#search_results{
+    border: 1px silver solid;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: #3b5d80c7;
+    margin-top: 20px;
+    width: 598px;
+    top: 52px;
+}
+
 
 #reviews_d {
     border: 1px silver solid;
