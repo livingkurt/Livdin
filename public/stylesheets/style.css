@@ -135,6 +135,22 @@ form.login {
 
 }
 
+.mapbox {
+    position: relative;
+}
+
+.mapbox .overlay {
+    position: absolute;
+    top: 13px;
+    left: 58px;
+    z-index: 314159;
+    pointer-events: none;
+}
+
+.mapbox .overlay .btn {
+    pointer-events: initial;
+}
+
 
 #reviews_d {
     border: 1px silver solid;
