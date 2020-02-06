@@ -12,7 +12,7 @@ const map_view = require("../public/views/map_view");
 const signup_view = require("../public/views/signup_view");
 const login_view = require("../public/views/login_view");
 const invite_friends_view = require("../public/views/invite_friends_view");
-const map_script_view = require("../public/views/map_script_view");
+// const map_script_view = require("../public/views/map_script_view");
 // const monday_view = require("./views/monday_view");
 
 module.exports = function (app) {
