@@ -3,7 +3,10 @@ module.exports = function(){
     <main id="main">
         <section>
             <div>
-                <header>Livdin</header>
+                <div id="name_logo">
+                    <img id="logo" src="../images/Livdin_Logo_blue.png" alt="">
+                    <header>Livdin</header>
+                </div>
             </div>
             <p id="description_p">
                 Find, Review and Share your Living Experiences
