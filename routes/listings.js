@@ -1,34 +1,7 @@
 /////axios versions//////
 const axios = require("axios");
 module.exports = function (){
-    axios({
-        "method": "GET",
-        "url": "https://realtor.p.rapidapi.com/properties/list-for-rent",
-        "headers": {
-            "content-type": "application/json",
-            "x-rapidapi-host": "realtor.p.rapidapi.com",
-            "x-rapidapi-key": "ee6b62ee4amshafea3e45f16c03ap17677fjsn293316618b80"
-        }, "params": {
-            "price_min": "1500",
-            "postal_code": "76543",
-            "radius": "10",
-            "sort": "relevance",
-            "state_code": "TX",
-            "limit": "200",
-            "city": "Killeen",
-            "offset": "0"
-        }
-    })
-        .then(response => {
-        //res.sendFile(path.join(__dirname, '../public/views/map_view.js'));
-            console.log(response.data.listings[0].address);
-            return (response.data.listings[0].address);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-        
-        
+            
 };
 
 //////unirest version/////

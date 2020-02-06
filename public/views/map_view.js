@@ -1,5 +1,9 @@
-module.exports = function(props){
-    console.log(props);
+const axios = require("axios");
+
+
+module.exports = function (props) {
+
+
     return `
     <div>
         <div class="mapbox"id="map" style="width: 100%; height: 100vh;">
@@ -8,13 +12,11 @@ module.exports = function(props){
                 <button target="_self" id="search_b">Search</button>
             </form>
             <div class="overlay" id="search_results">
-                <p id="address_search"for="">Address: ${props}</p>
-                <p id="rating_search"for="">Rating</p>
-                <p id="review_search">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minima alias cumque temporibus
-                    numquam, rem minus corrupti sequi qui officia veniam. Ratione officia autem odio deserunt
-                    maiores rerum est ab!
-                </p>
+                <p id="address_search"for="">Address: ${props.address}</p>
+                <p id="rating_search"for="">Price: ${props.price}</p>
+                <p id="review_search">Sqft: ${props.sqft} ft</p>
+                <p id="review_search">Beds/Bath: ${props.beds}/${props.baths} </p>
+                <img src=${props.photo}>
             </div>
         </div>
 
@@ -31,4 +33,4 @@ module.exports = function(props){
     `;
 };
 
-{/* <script src="../js/map.js"></script> */}
+{/* <script src="../js/map.js"></script> */ }
