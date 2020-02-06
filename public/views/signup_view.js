@@ -7,7 +7,7 @@ module.exports = function(){
                 <form class="signup">
                     <div class="">
                         <label class="form_labels"for="exampleInputEmail1">Username</label>
-                        <input onfocus="this.placeholder = ''"type="username" class="all_inputs_i" id="" onblur="this.placeholder='Username'" placeholder="Username">
+                        <input onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="" onblur="this.placeholder='Username'" placeholder="Username">
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputEmail1">Email address</label>
@@ -23,15 +23,15 @@ module.exports = function(){
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputPassword1">Name</label>
-                        <input onfocus="this.placeholder = ''"type="password" class="all_inputs_i" id="password-input" onblur="this.placeholder='Name'" placeholder="Name">
+                        <input onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="password-input" onblur="this.placeholder='Name'" placeholder="Name">
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputEmail1">Hometown</label>
-                        <input onfocus="this.placeholder = ''"type="email" class="all_inputs_i" id="email-input" onblur="this.placeholder='Hometown'" placeholder="Hometown">
+                        <input onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="email-input" onblur="this.placeholder='Hometown'" placeholder="Hometown">
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputEmail1">Bio</label>
-                        <textarea onfocus="this.placeholder = ''"type="email" class="all_inputs_i" id="email-input" onblur="this.placeholder='Bio'" placeholder="Bio"></textarea>
+                        <textarea onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="email-input" onblur="this.placeholder='Bio'" placeholder="Bio"></textarea>
                     </div>
                     <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
