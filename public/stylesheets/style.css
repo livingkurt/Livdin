@@ -151,6 +151,17 @@ form.login {
     pointer-events: initial;
 }
 
+#search_results{
+    border: 1px silver solid;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: #3b5d80c7;
+    margin-top: 20px;
+    width: 598px;
+    top: 52px;
+}
+
 
 #reviews_d {
     border: 1px silver solid;
