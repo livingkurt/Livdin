@@ -12,6 +12,7 @@ const map_view = require("../public/views/map_view");
 const signup_view = require("../public/views/signup_view");
 const login_view = require("../public/views/login_view");
 const invite_friends_view = require("../public/views/invite_friends_view");
+const map_script_view = require("../public/views/map_script_view");
 // const monday_view = require("./views/monday_view");
 
 module.exports = function(app) {
@@ -32,7 +33,7 @@ module.exports = function(app) {
             res.redirect("/members");
         }
         // res.sendFile(path.join(__dirname, "../public/html/signup.html"));
-        res.send(main_layout(signup_view(),"login", "Login"));
+        res.send(main_layout(signup_view(), "login", "Login"));
     });
 
     app.get("/map", function(req, res) {
@@ -40,7 +41,8 @@ module.exports = function(app) {
         // res.sendFile(path.join(__dirname, "../public/html/map.html"));
         if (req.user) {
             // res.redirect("/members");
-            return res.send(main_layout(map_view(), "members", "Profile"));
+            return res.send(main_layout(map_view(map_script_view()), "members", "Profile"));
+
         }
         res.send(main_layout(map_view(), "login", "Login"));
     });
