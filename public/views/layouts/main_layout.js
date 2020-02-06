@@ -20,7 +20,7 @@ module.exports = function(body,button,name){
     <body>
         <div id="nav">
             <div class="topnav">
-                <a href="/"><i id="home_icon" class="fas fa-home"></i></a>
+                <a href="/"><img src="" alt=""><img id="livdin_logo" src="../images/Livdin Logo_white.png" alt=""></a>
                 <div id="right_side_nav">
                     <a class="nav_links" href="/map">Discover</a>
                     <a class="nav_links" href="/invite-friends">Invite Friends</a>
@@ -32,3 +32,5 @@ module.exports = function(body,button,name){
         ${body}
 `;
 };
+
+{/* <a href="/"><i id="home_icon" class="fas fa-home"></i></a> */}
