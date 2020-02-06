@@ -22,7 +22,7 @@ const description_p_e = $("#description_p");
 $.get("/api/user_data").then(function (result) {
     const data = result;
     print(data.id);
-    get_user_info(data.id)
+    get_user_info(data.id);
 });
 
 
@@ -34,7 +34,7 @@ const get_user_info = id => {
         update_profile(data, format_date(data));
 
     });
-}
+};
 
 
 
