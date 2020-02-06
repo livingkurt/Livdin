@@ -222,6 +222,7 @@ form.login {
 #profile_container_d {
     display: flex;
     flex-direction: column;
+    width: 80%;
     /* padding: 50px; */
     /* width: 50%; */
 }
