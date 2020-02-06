@@ -14,6 +14,18 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/api/user/:email", function(req, res) {
+        db.User.findOne({
+            where: {
+                email: req.params.email
+                // need Review.user_id to equal logged in User.id
+            },
+            include: [db.Review]
+        }).then(function(dbReviews) {
+            res.json(dbReviews);
+        });
+    });
+
     // API route to get all reviews for certain address
     app.get("/api/reviews", function(req, res) {
         db.Review.findAll({
