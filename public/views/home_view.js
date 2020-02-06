@@ -22,7 +22,6 @@ module.exports = function(){
 
     </footer>
     <script src="../js/index.js"></script>
-    <script type="module" src="./js/parse-address.min.js"></script>
 </body>
 
 </html>
