@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var parser = require('parse-address');
 
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -50,4 +51,39 @@ module.exports = function (app) {
             });
         }
     });
+
+    app.post("/api/searched", function (req, res) {
+        // Take the request...
+        var searched = req.body;
+
+        var parsed = parser.parseLocation(searched);
+
+        //Parsed address:
+        // {
+        //     number: '1005',
+        //     prefix: 'N',
+        //     street: 'Gravenstein',
+        //     type: 'Hwy',
+        //     city: 'Sebastopol',
+        //     state: 'CA',
+        //     zip: '95472'
+        // }
+
+
+        // Then add the character to the database using sequelize
+        Search.create({
+            number: parsed.number,
+            prefix: parsed.prefix,
+            street: parsed.street,
+            type: parsed.type,
+            city: parsed.city,
+            state: cparsed.state,
+            zip: parsed.zip,
+        });
+
+        res.status(204).end();
+    });
 };
+
+
+

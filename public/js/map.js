@@ -81,3 +81,14 @@ window.onload = function() {
 
     }
 };
+
+$("#search_b").on("click", function(event) {
+    event.preventDefault();
+
+    var homeSearch = $("#search_i").val().trim();
+
+    $.post("api/searched", homeSearch);
+
+    ("#name").val("");
+    console.log("#homeSearch");
+});

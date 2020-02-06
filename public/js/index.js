@@ -39,9 +39,17 @@ search_form_f_e.on("submit", (event) => {
 });
 
 
+/////function to get the user input for the axios call/////
+$("#search_b").on("click", function (event) {
+    event.preventDefault();
 
+    var homeSearch = $("#search_i").val().trim();
 
+    $.post("api/searched", homeSearch)
+        .then(function (data) {
+            // log the data we found
+            console.log(data);
+        });
 
-
-
-
+    // ("#search_i").val("");
+});
