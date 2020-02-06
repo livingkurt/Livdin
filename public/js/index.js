@@ -1,3 +1,7 @@
+const parser = require("../../server");
+
+// var parsed = parser.parseLocation('1005 N Gravenstein Highway Sebastopol CA 95472');
+
 // const search_b_e = $("#search_b");
 const search_i_e = $("#search_i");
 const search_form_f_e = $("#search_form_f");
@@ -6,8 +10,10 @@ const search_form_f_e = $("#search_form_f");
 const get_search_result = () => {
     const search_result = search_i_e.val();
     print(search_result);
+    const parsed = parser.parseLocation(search_result)
+    print(parsed)
     // window.open(`/map/${search_result}`);
-    window.open("/map");
+    // window.open("/map");
     // var params = new URLSearchParams(window.location.search.slice(1));
     // console.log(params.get())
 };
