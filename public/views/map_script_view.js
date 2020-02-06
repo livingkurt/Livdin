@@ -37,8 +37,8 @@ module.exports = function() {
             }).addTo(map);
     
         }
-    }`
-}
+    }`;
+};
 
 // module.exports = function(props) {
 //     return `
