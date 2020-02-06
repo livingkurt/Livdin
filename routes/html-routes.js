@@ -23,7 +23,7 @@ module.exports = function (app) {
         // res.sendFile(path.join(__dirname, "../public/html/index.html"));
         if (req.user) {
             // res.redirect("/members");
-            return res.send(main_layout(home_view(),"members", "Profile"));
+            return res.send(main_layout(home_view(),"profile", "Profile"));
         }
         res.send(main_layout(home_view(),"login", "Login"));
     });
@@ -31,7 +31,7 @@ module.exports = function (app) {
     app.get("/signup", function (req, res) {
         // If the user already has an account send them to the members page
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/profile");
         }
         // res.sendFile(path.join(__dirname, "../public/html/signup.html"));
         res.send(main_layout(signup_view(),"login", "Login"));
@@ -42,7 +42,7 @@ module.exports = function (app) {
         // res.sendFile(path.join(__dirname, "../public/html/map.html"));
         if (req.user) {
             // res.redirect("/members");
-            return res.send(main_layout(map_view(),"members", "Profile"));
+            return res.send(main_layout(map_view(),"profile", "Profile"));
             
         }
         res.send(main_layout(map_view(),"login", "Login"));
@@ -53,7 +53,7 @@ module.exports = function (app) {
         // res.sendFile(path.join(__dirname, "../public/html/invite_friends.html"));
         if (req.user) {
             // res.redirect("/members");
-            return res.send(main_layout(invite_friends_view(),"members", "Profile"));
+            return res.send(main_layout(invite_friends_view(),"profile", "Profile"));
         }
         res.send(main_layout(invite_friends_view(),"login", "Login"));
     });
@@ -61,7 +61,7 @@ module.exports = function (app) {
     app.get("/login", function (req, res) {
         // If the user already has an account send them to the members page
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/profile");
         }
         // res.sendFile(path.join(__dirname, "../public/html/login.html"));
         res.send(main_layout(login_view(),"login", "Login"));
@@ -69,7 +69,7 @@ module.exports = function (app) {
 
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
-    app.get("/members", isAuthenticated, function (req, res) {
+    app.get("/profile", isAuthenticated, function (req, res) {
         // res.sendFile(path.join(__dirname, "../public/html/members.html"));
         res.send(main_layout(profile_view(),"logout", "Logout"));
     });

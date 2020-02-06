@@ -38,7 +38,8 @@ module.exports = function(){
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="..js/members.js"></script>
+<script src="../js/profile.js"></script>
+
 
 </body>
 
