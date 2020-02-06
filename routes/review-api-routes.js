@@ -26,12 +26,12 @@ module.exports = function(app) {
     });
 
     // API route to post new review
-    app.get("/api/reviews", function(req, res) {
+    app.post("/api/reviews", function(req, res) {
         db.Review.create({
             address: req.body.address,
             rating: req.body.rating,
-            home_quality_review: req.body.home_quality_review,
-            user_id: req.body.id
+            review: req.body.home_quality_review,
+            user_id: req.body.user_id
             // This is probably not correct - need Review.user_id to equal logged in User.id
         }).then(function(dbReview) {
             res.json(dbReview);
