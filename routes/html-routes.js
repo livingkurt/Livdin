@@ -32,7 +32,7 @@ module.exports = function (app) {
             res.redirect("/members");
         }
         // res.sendFile(path.join(__dirname, "../public/html/signup.html"));
-        res.send(main_layout(signup_view()));
+        res.send(main_layout(signup_view(),"login", "Login"));
     });
 
     app.get("/map", function (req, res) {

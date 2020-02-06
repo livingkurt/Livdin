@@ -3,15 +3,17 @@ module.exports = function(){
     <main id="main">
         <section>
             <div>
-                <header>Livdin</header>
+                <div id="name_logo">
+                    <img id="logo" src="../images/Livdin_Logo_blue.png" alt="">
+                    <header>Livdin</header>
+                </div>
             </div>
             <p id="description_p">
                 Find, Review and Share your Living Experiences
             </p>
-            <form action="/search.html" id="search_form_f" autocomplete="on">
-                <input onfocus="this.placeholder = ''" type="text" name="" id="search_i"
-                    placeholder="Address, Neighborhood, City, County">
-                <button id="search_b">Search</button>
+            <form id="search_form_f" autocomplete="on">
+                <input onfocus="this.placeholder = ''" onblur="this.placeholder='Address, Neighborhood, City, County'" type="text" name="" id="search_i" placeholder="Address, Neighborhood, City, County">
+                <button target="_self" id="search_b">Search</button>
             </form>
         </section>
 
@@ -20,6 +22,7 @@ module.exports = function(){
 
     </footer>
     <script src="../js/index.js"></script>
+    <script type="module" src="./js/parse-address.min.js"></script>
 </body>
 
 </html>
