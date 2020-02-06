@@ -16,7 +16,7 @@ module.exports = function(){
                     <div id="signup_or_login">
                         <button class="all_buttons_b" type="submit" href="/" class="btn btn-default">Login</button>
                        
-                    <p id="or_login_p">Or Sign in <a id="or_login_p"class="all_buttons_b" id=""href="/signup">here</a></p>
+                    <p id="or_login_p">Or sign up <a id="or_login_p"class="all_buttons_b" id=""href="/signup">here</a></p>
                 </div>
                 </form>
                 <!-- <br /> -->

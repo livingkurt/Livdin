@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        home_quality_review: {
+        review: {
             type: DataTypes.STRING,
             allowNull: true
         },

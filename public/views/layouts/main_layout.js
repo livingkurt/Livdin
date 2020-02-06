@@ -12,6 +12,8 @@ module.exports = function(body,button,name){
         <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Julius+Sans+One|Sulphur+Point&display=swap"
             rel="stylesheet">
         <script src="https://kit.fontawesome.com/cc10a71280.js" crossorigin="anonymous"></script>
+        <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
         <link href="https://fonts.googleapis.com/css?family=Biryani:900|Jaldi:700&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <title>Livdin</title>
