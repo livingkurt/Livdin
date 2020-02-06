@@ -1,4 +1,5 @@
-module.exports = function(){
+module.exports = function(props){
+    console.log(props);
     return `
     <div>
         <div class="mapbox"id="map" style="width: 100%; height: 100vh;">
@@ -7,7 +8,7 @@ module.exports = function(){
                 <button target="_self" id="search_b">Search</button>
             </form>
             <div class="overlay" id="search_results">
-                <p id="address_search"for="">Address</p>
+                <p id="address_search"for="">Address: ${props}</p>
                 <p id="rating_search"for="">Rating</p>
                 <p id="review_search">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minima alias cumque temporibus
