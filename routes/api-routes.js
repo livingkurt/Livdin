@@ -17,9 +17,9 @@ module.exports = function (app) {
         db.User.create({
             email: req.body.email,
             password: req.body.password,
+            username: req.body.username,
             name: req.body.name,
-            age: req.body.age,
-            home_town: req.body.home_town,
+            hometown: req.body.home_town,
             bio: req.body.bio
         })
             .then(function () {

@@ -4,7 +4,7 @@ module.exports = {
         "commonjs": true,
         "es6": true,
         "node": true,
-        "jquery": true
+        "jquery": true,
     },
     "extends": "eslint:recommended",
     "globals": {
@@ -17,6 +17,10 @@ module.exports = {
     "rules": {
         "indent": [
             "error",
+            4
+        ],
+        "no-undef": [
+            "off",
             4
         ],
         "linebreak-style": [
