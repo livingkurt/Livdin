@@ -23,6 +23,7 @@
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
-    "git-open": "^2.1.0"
+    "git-open": "^2.1.0",
+    "nodemon": "^2.0.2"
   }
 }
