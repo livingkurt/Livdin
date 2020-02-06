@@ -27,6 +27,11 @@ header {
     /* font-family: 'Sulphur Point', sans-serif; */
 }
 
+#livdin_logo {
+    height: 41px;
+    margin: 15px 25px 15px 31px;
+}
+
 #footer {
     position: fixed;
     left: 0;
@@ -48,6 +53,8 @@ section {
     border-radius: 48px;
 }
 
+
+
 #reviews_d {
     border: 1px silver solid;
     padding: 20px;
@@ -55,6 +62,12 @@ section {
     color: white;
     background-color: #3b5d80c7;
     margin-top: 20px;
+}
+
+.form_header {
+    font-family: 'Jaldi', sans-serif;
+    color: #3b5d80;
+    margin-top: 25px;
 }
 
 #search_i {
@@ -67,6 +80,35 @@ section {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
 
 }
+textarea { resize: none; }
+
+.all_inputs_i {
+    font-size: 16px;
+    padding: 10px;
+    width: 600px;
+    border-radius: 15px;
+    color: #3b5d80;
+    border: 1px solid silver;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+form.signup {
+    margin-top: 16px;
+}
+
+form.login {
+    margin-top: 16px;
+}
+
+#name_logo {
+    display: flex;
+}
+
+#logo {
+    height: 94px;
+    margin: 6px 29px 0px 0px;
+}
+
 
 #profile_name_h {
     /* height: 179px; */
@@ -78,6 +120,21 @@ section {
     font-size: 75px;
     height: 100px;
 }
+
+.form_labels {
+    margin: 10px 0px;
+}
+
+#signup_or_login {
+    display: flex;
+    margin: 15px 0px;
+
+}
+
+#or_login_p{
+    margin: 11px 8px;
+}
+
 
 #profile_container_d {
     display: flex;
@@ -108,7 +165,6 @@ section {
 
 
 #search_b {
-    /* font-size: 33px; */
     font-size: 16px;
     padding: 10px;
     width: 85px;
@@ -120,12 +176,25 @@ section {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
-#search_b:focus {
+.all_buttons_b {
+    /* font-size: 33px;  */
+    font-size: 16px;
+    padding: 10px;
+    /* width: 85px; */
+
+    border-radius: 15px;
+    color: white;
+    background-color: #3b5d80;
+    border: 1px solid #3b5d80;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+.all_buttons_b:focus {
   outline:0;
   /* background-color: white; */
 }
 
-#search_b:hover {
+.all_buttons_b:hover {
     /* outline:0; */
     /* background-color: #3b5d80; */
     background-color: #ddd;
@@ -184,6 +253,7 @@ section {
     /* color: black; */
     border-radius: 15px;
     color: #3b5d80;
+    text-decoration: none;
 }
 
 #profile_section_s {
@@ -216,12 +286,12 @@ section {
 
 .nav_links {
     display: flex;
-    flex-direction: horizontal;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 16px;
+    
 
 }
 
