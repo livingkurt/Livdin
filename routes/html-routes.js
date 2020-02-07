@@ -30,9 +30,13 @@ module.exports = function (app) {
         res.send(main_layout(signup_view(), "login", "Login"));
     });
 
-    app.get("/map/:search", function (req, res) {
+    app.get("/map/:search?", function (req, res) {
         // If the user already has an account send them to the members page
-        res.send(main_layout(map_view(), "profile", "Profile"));
+        if (req.user) {
+            // res.redirect("/members");
+            return res.send(main_layout(map_view(), "profile", "Profile"));
+        }
+        res.send(main_layout(map_view(), "login", "Login"));
     });
 
     app.get("/invite-friends", function (req, res) {
