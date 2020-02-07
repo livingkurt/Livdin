@@ -54,7 +54,7 @@ window.onload = function () {
     console.log(search_result);
     $.get(`/api/parse/${search_result}`).then(function (result) {
         const data = result;
-        console.log(data.realtor)
+        console.log(data.realtor);
         console.log(data.chosenLocation.formattedAddress);
         const street = data.chosenLocation.street;
         const city = data.chosenLocation.city;

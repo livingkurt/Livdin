@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
-var fs = require("fs");
 const axios = require("axios");
 
 module.exports = function (app) {
