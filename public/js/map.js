@@ -27,7 +27,7 @@ window.onload = function() {
     });
 
     const create_elements = (data) => {
-        const map_container_e = $("#search_box");
+        const map_container_e = $("#search_box_results");
         data.listings.forEach(listing => {
             const search_results_e = $("<div>");
             const address_search_e = $("<p>");
