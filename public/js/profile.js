@@ -11,10 +11,10 @@ const profile_name_h_e = $("#profile_name_h");
 const joined_l_e = $("#joined_l");
 const home_town_l_e = $("#home_town_l");
 const description_p_e = $("#description_p");
-const rev_date = $("#rev_date");
-const rev_address = $("#rev_address");
-const review_p = $("#review_p");
-// const reviews_d_e = $("#reviews_d");
+// const rev_date = $("#rev_date");
+// const rev_address = $("#rev_address");
+// const review_p = $("#review_p");
+const reviews_r = $("#reviews_r");
 
 // var params = new URLSearchParams(window.location.search.slice(1));
 
@@ -44,10 +44,15 @@ const update_profile = (data, date, date_r) => {
     home_town_l_e.text(`Hometown: ${data.hometown}`);
     description_p_e.text(data.bio);
     // reviews_d_e.text(data.name);
-    rev_date.text(date_r);
+    
     for(let i = 0; i < data.Reviews.length; i++) {
-        rev_address.text(data.Reviews[i].address);
-        review_p.text(data.Reviews[i].review);
+        reviews_r.append(`<div class="reviews_d"><p>Date Created: ${date_r}</p>
+        <p>Address: ${data.Reviews[i].address}</p>
+        <p>Rating: ${data.Reviews[i].rating} / 5</p>
+        <p>Review: ${data.Reviews[i].review}</p></div>`);
+        // reviews_r.append(`<p>Address: ${data.Reviews[i].address}</p>`);
+        // reviews_r.append(`<p>Rating: ${data.Reviews[i].rating} / 5</p>`);
+        // reviews_r.append(`<p>Review: ${data.Reviews[i].review}</p></div>`);
     }
 };
 

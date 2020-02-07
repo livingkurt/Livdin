@@ -19,14 +19,8 @@ module.exports = function(){
             </div>
         </div>
         <div>
-            <div id="reviews_d">
-                <p id="rev_date" for="">Date</p>
-                <p id="rev_address" for="">Address</p>
-                <p id="review_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minima alias cumque temporibus
-                    numquam, rem minus corrupti sequi qui officia veniam. Ratione officia autem odio deserunt
-                    maiores rerum est ab!
-                </p>
+            <div id="reviews_r">
+                
             </div>
         </div>
 

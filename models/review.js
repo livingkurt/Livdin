@@ -11,21 +11,22 @@ module.exports = function(sequelize, DataTypes) {
         review: {
             type: DataTypes.STRING,
             allowNull: true
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "User",
-                key: "id"
-            }
         }
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     references: {
+        //         model: "User",
+        //         key: "id"
+        //     }
+        // }
     });
 
     Review.associate = function(models) {
         Review.belongsTo(models.User, {
-            foreignKey: "id",
-            target_Key: "user_id"
+            foreignKey: {
+                allowNull: false
+            }
         });
     };
 
