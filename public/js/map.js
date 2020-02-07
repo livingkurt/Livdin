@@ -47,11 +47,11 @@
 window.onload = function() {
     //Initiate API key
     L.mapquest.key = "nkL6LFerG2cvr74dIKmAFOfVpGn5ACIZ";
-    var pathArray = window.location.pathname.split('/');
+    var pathArray = window.location.pathname.split("/");
     
-    console.log(pathArray[2])
-    let search_result = pathArray[2].split("%20").join(" ")
-    console.log(search_result)
+    console.log(pathArray[2]);
+    let search_result = pathArray[2].split("%20").join(" ");
+    console.log(search_result);
     // console.log((window.location.href.slice(1)))
     // var params = new URLSearchParams(window.location.search);
     // console.log(params.get())

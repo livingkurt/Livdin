@@ -53,7 +53,7 @@ module.exports = function (app) {
         // If the user already has an account send them to the members page
         // res.sendFile(path.join(__dirname, "../public/html/map.html"));
         // if (req.user) {
-            // res.redirect("/members");
+        // res.redirect("/members");
         // }
         axios({
             "method": "GET",

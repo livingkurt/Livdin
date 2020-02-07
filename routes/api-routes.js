@@ -52,19 +52,19 @@ module.exports = function (app) {
     });
 
     app.get("/api/parse/:search", function (req, res) {
-        var chosenLocation;
+        // var chosenLocation;
         // console.log(req.parmms.search)
         // console.log(req.params.search)
         const search_results = req.params.search;
         // console.log(req)
         require("dotenv").config();
-        const NodeGeocoder = require('node-geocoder');
+        const NodeGeocoder = require("node-geocoder");
 
         const options = {
             provider: process.env.GEOCODER_PROVIDER,
 
             // Optional depending on the providers
-            httpAdapter: 'https', // Default
+            httpAdapter: "https", // Default
             apiKey: process.env.GEOCODER_API_KEY, // for Mapquest, OpenCage, Google Premier
             formatter: null // 'gpx', 'string', ...
         };
