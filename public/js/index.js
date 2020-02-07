@@ -10,19 +10,11 @@ const search_form_f_e = $("#search_form_f");
 const get_search_result = () => {
     let search_result = search_i_e.val();
     // search_result = search_result.replace(/[^\w\s]/gi, "");
+    window.open(`/map/${search_result}`, "_self");
     
     // search_result = search_result.replace(" ", "+");
     // print(search_result);
-    $.get(`/api/parse/${search_result}`).then(function (result) {
-        const data = result;
-        // console.log(data.formattedAddress);
-        search_result = data.formattedAddress;
-        console.log(search_result);
-        // var params = new URLSearchParams(window.location.search.slice(1));
-        // const parsed = parser.parseLocation(search_result);
-        // get_user_info(data.id);
-        window.open(`/map/${search_result}`, "_self");
-    });
+    
     
     
     // print(params);

@@ -44,37 +44,34 @@
 //     }
 // };
 
-window.onload = function() {
+window.onload = function () {
     //Initiate API key
     L.mapquest.key = "nkL6LFerG2cvr74dIKmAFOfVpGn5ACIZ";
     var pathArray = window.location.pathname.split("/");
-    
+
     console.log(pathArray[2]);
     let search_result = pathArray[2].split("%20").join(" ");
     console.log(search_result);
-    // console.log((window.location.href.slice(1)))
-    // var params = new URLSearchParams(window.location.search);
-    // console.log(params.get())
+    $.get(`/api/parse/${search_result}`).then(function (result) {
+        const data = result;
+        console.log(data.realtor)
+        console.log(data.chosenLocation.formattedAddress);
+        const street = data.chosenLocation.street;
+        const city = data.chosenLocation.city;
+        const state = data.chosenLocation.state;
+        const zipcode = data.chosenLocation.zipcode;
+        console.log(street);
+        console.log(city);
+        console.log(state);
+        console.log(zipcode);
+        
+    });
 
-    //Define current location based of user input in the future
-    // var chosenLocation = {
-    //     street: "",
-    //     city: search_result[0],
-    //     state: search_result[1],
-    //     postalCode: ""
-    // };
-    // var chosenLocation = {
 
-    //     formattedAddress: search_result[0].formattedAddress,
-    //     longitude: search_result[0].longitude,
-    //     latitude: search_result[0].latitude,
-    //     street: search_result[0].streetName,
-    //     city: search_result[0].city,
-    //     state: search_result[0].stateCode,
-    //     zipcode: search_result[0].zipcode
-    // };
+    
 
     //Run function create map using the user location
+    // const start_map = () => {
     L.mapquest.geocoding().geocode(search_result, createMap);
 
     //Function to create map
@@ -99,14 +96,5 @@ window.onload = function() {
 
     }
 };
+// }
 
-$("#search_b").on("click", function(event) {
-    event.preventDefault();
-
-    var homeSearch = $("#search_i").val().trim();
-
-    $.post("api/searched", homeSearch);
-
-    ("#name").val("");
-    console.log("#homeSearch");
-});

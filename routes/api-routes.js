@@ -1,7 +1,8 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
-// var fs = require("fs");
+var fs = require("fs");
+const axios = require("axios");
 
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -51,21 +52,6 @@ module.exports = function (app) {
             });
         }
     });
-    // app.post("/api/searched", function (req) {
-    //     // Take the request...
-    //     var searched = req.body;
-
-    //     fs.writeFile("log.txt", JSON.stringify(searched), function (err) {
-    //         console.log("api" + JSON.stringify(searched));
-    //         if (err) {
-    //             return console.log(err);
-    //         }
-
-    //         console.log("Success!");
-
-    //     });
-
-    // });
     app.get("/api/parse/:search", function (req, res) {
         // var chosenLocation;
         // console.log(req.parmms.search)
@@ -103,7 +89,36 @@ module.exports = function (app) {
                         zipcode: data[0].zipcode
                     };
                     // console.log(chosenLocation.formattedAddress);
-                    res.json(chosenLocation);
+                    // res.json(chosenLocation);
+                    axios({
+                        "method": "GET",
+                        "url": "https://realtor.p.rapidapi.com/properties/list-for-rent",
+                        "headers": {
+                            "content-type": "application/json",
+                            "x-rapidapi-host": "realtor.p.rapidapi.com",
+                            "x-rapidapi-key": "ee6b62ee4amshafea3e45f16c03ap17677fjsn293316618b80"
+                        }, "params": {
+                            "price_min": "1500",
+                            "postal_code": chosenLocation.zipcode,
+                            "radius": "10",
+                            "sort": "relevance",
+                            "state_code": chosenLocation.state,
+                            "limit": "3",
+                            "city": chosenLocation.city,
+                            "offset": "0"
+                        }
+                    })
+                        .then(response => {
+                            res.json({
+                                chosenLocation,
+                                realtor:response.data
+                            });
+                            // res.son(main_layout(map_view(response.data.listings[0]), "profile", "Profile"));
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
+
                 })
 
                 // return parse

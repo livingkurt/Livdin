@@ -316,6 +316,14 @@ form.login {
 
 }
 
+/* #map_container {
+    position: relative;
+}
+
+#search_form_map_f {
+    position: absolute;
+} */
+
 .nav_links {
     display: flex;
     color: #f2f2f2;
