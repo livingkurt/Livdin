@@ -11,6 +11,9 @@ const profile_name_h_e = $("#profile_name_h");
 const joined_l_e = $("#joined_l");
 const home_town_l_e = $("#home_town_l");
 const description_p_e = $("#description_p");
+const rev_date = $("#rev_date");
+const rev_address = $("#rev_address");
+const review_p = $("#review_p");
 // const reviews_d_e = $("#reviews_d");
 
 // var params = new URLSearchParams(window.location.search.slice(1));
@@ -25,28 +28,27 @@ $.get("/api/user_data").then(function (result) {
     get_user_info(data.id);
 });
 
-
 const get_user_info = id => {
     const query_url = `/api/user/${id}`;
     $.get(query_url).then(function (result) {
         const data = result;
         console.log(data);
-        update_profile(data, format_date(data));
+        update_profile(data, format_date(data), format_date_r(data));
 
     });
 };
 
-
-
-
-const update_profile = (data, date) => {
+const update_profile = (data, date, date_r) => {
     profile_name_h_e.text(data.name);
     joined_l_e.text(`Joined ${date}`);
-    home_town_l_e.text(`Hometown ${data.hometown}`);
+    home_town_l_e.text(`Hometown: ${data.hometown}`);
     description_p_e.text(data.bio);
     // reviews_d_e.text(data.name);
-
-
+    rev_date.text(date_r);
+    for(let i = 0; i < data.Reviews.length; i++) {
+        rev_address.text(data.Reviews[i].address);
+        review_p.text(data.Reviews[i].review);
+    }
 };
 
 const format_date = data => {
@@ -56,6 +58,16 @@ const format_date = data => {
     const date = `${month}/${day}/${year}`;
     return date;
     // print(date)
+};
+
+const format_date_r = data => {
+    for(let i = 0; i < data.Reviews.length; i++) {
+        const year_r = data.Reviews[i].createdAt.slice(0, 4);
+        const month_r = data.Reviews[i].createdAt.slice(5, 7);
+        const day_r = data.Reviews[i].createdAt.slice(8, 10);
+        const date_r = `${month_r}/${day_r}/${year_r}`;
+        return date_r;
+    }
 };
 
 const print = x => console.log(x);
