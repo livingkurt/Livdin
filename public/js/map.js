@@ -8,7 +8,7 @@ window.onload = function () {
         let search_result = search_i_e.val();
         // search_result = search_result.replace(/[^\w\s]/gi, "");
         // window.open(`/map/${search_result}`, "_self");
-        parse_address(search_result)
+        parse_address(search_result);
 
     };
 
