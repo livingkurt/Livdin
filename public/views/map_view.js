@@ -1,4 +1,3 @@
-
 // module.exports = function(props){
 //     return `
 //     <div>
@@ -17,11 +16,11 @@
 //         </div>
 //         <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div>
 //     </div>
-    
+
 //     <footer id="footer">
 
 //     </footer>
-    
+
 //     <script src="../js/map.js"></script>
 // </body>
 
@@ -29,11 +28,11 @@
 //     `;
 // };
 
-{/* <script src="../js/map.js"></script> */ }
+{ /* <script src="../js/map.js"></script> */ }
 
 
 
-module.exports = function(){
+module.exports = function() {
     return `
     <div>
         <div id="map_container">
@@ -49,7 +48,13 @@ module.exports = function(){
                 <img src=>
             </div>
         </div>
-        <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div>
+        <div class="mapbox"id="map" style="width: 100%; height: 100vh;">
+        <!-- modal -->
+        <div id="ex1" class="modal">
+            <p>THIS IS WHERE WE ADD OUR REVIEW FORM.</p>
+            <a href="#" rel="modal:close">Close</a>
+        </div>
+        </div>
     </div>
     
     <footer id="footer">
@@ -63,4 +68,4 @@ module.exports = function(){
     `;
 };
 
-{/* <script src="../js/map.js"></script> */ }
+{ /* <script src="../js/map.js"></script> */ }

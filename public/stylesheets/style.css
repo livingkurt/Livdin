@@ -1,14 +1,13 @@
 * {
-  
     font-family: 'Julius Sans One', sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0px;
     /* background: linear-gradient(180deg, rgba(42,153,102,0) 29%, rgba(59,93,128,1) 100%); */
-    background: linear-gradient(180deg, rgba(42,153,102,0) 0%, rgba(95,133,173,1) 100%);
-  
+    background: linear-gradient(180deg, rgba(42, 153, 102, 0) 0%, rgba(95, 133, 173, 1) 100%);
 }
 
 header {
@@ -30,11 +29,9 @@ section {
     border-radius: 48px;
 }
 
-textarea { 
-    resize: none; 
+textarea {
+    resize: none;
 }
-
-
 
 form.signup {
     margin-top: 16px;
@@ -64,13 +61,11 @@ form.login {
     margin: 10px 0px;
 }
 
-
 .all_buttons_b {
     /* font-size: 33px;  */
     font-size: 16px;
     padding: 10px;
     /* width: 85px; */
-
     border-radius: 15px;
     color: white;
     background-color: #3b5d80;
@@ -79,8 +74,8 @@ form.login {
 }
 
 .all_buttons_b:focus {
-  outline:0;
-  /* background-color: white; */
+    outline: 0;
+    /* background-color: white; */
 }
 
 .all_buttons_b:hover {
@@ -94,7 +89,9 @@ form.login {
     font-size: 80px;
 }
 
+
 /* Add a black background color to the top navigation */
+
 .topnav {
     background-color: #3b5d80;
     overflow: hidden;
@@ -102,12 +99,16 @@ form.login {
     border-radius: 0px 0px 15px 15px;
 }
 
+
 /* Style the links inside the navigation bar */
+
 .topnav {
-    display: flex;  
+    display: flex;
 }
 
+
 /* Change the color of links on hover */
+
 .topnav .nav_links:hover {
     background-color: #ddd;
     /* color: black; */
@@ -115,7 +116,6 @@ form.login {
     color: #3b5d80;
     text-decoration: none;
 }
-
 
 #livdin_logo {
     height: 41px;
@@ -132,7 +132,6 @@ form.login {
     color: white;
     text-align: center;
     border-radius: 15px 15px 0px 0px;
-
 }
 
 .mapbox {
@@ -151,7 +150,11 @@ form.login {
     pointer-events: initial;
 }
 
-#search_results{
+.modal {
+    z-index: 2;
+}
+
+#search_results {
     border: 1px silver solid;
     padding: 20px;
     border-radius: 15px;
@@ -162,7 +165,6 @@ form.login {
     top: 52px;
 }
 
-
 .reviews_d {
     border: 1px silver solid;
     padding: 20px;
@@ -172,8 +174,6 @@ form.login {
     margin-top: 20px;
 }
 
-
-
 #search_i {
     font-size: 16px;
     padding: 10px;
@@ -182,9 +182,7 @@ form.login {
     color: #3b5d80;
     border: 1px solid silver;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
-
 }
-
 
 #name_logo {
     display: flex;
@@ -194,7 +192,6 @@ form.login {
     height: 94px;
     margin: 6px 29px 0px 0px;
 }
-
 
 #profile_name_h {
     /* height: 179px; */
@@ -207,17 +204,14 @@ form.login {
     height: 100px;
 }
 
-
 #signup_or_login {
     display: flex;
     margin: 15px 0px;
-
 }
 
-#or_login_p{
+#or_login_p {
     margin: 11px 8px;
 }
-
 
 #profile_container_d {
     display: flex;
@@ -236,7 +230,6 @@ form.login {
 #profile_upper_section {
     display: flex;
     display: row;
-
 }
 
 #image_container_d {
@@ -247,12 +240,10 @@ form.login {
     /* padding: 34px; */
 }
 
-
 #search_b {
     font-size: 16px;
     padding: 10px;
     width: 85px;
-
     border-radius: 15px;
     color: white;
     background-color: #3b5d80;
@@ -267,11 +258,10 @@ form.login {
     border: 0px;
 }
 
-
-#joined_l, #home_town_l {
+#joined_l,
+#home_town_l {
     margin: 20px 0px;
 }
-
 
 #description_p {
     font-size: 16px;
@@ -281,22 +271,19 @@ form.login {
     /* width: 50%; */
 }
 
-
 #search_i:focus {
-    outline:0;
+    outline: 0;
 }
-
-
 
 #profile_section_s {
     background-color: white;
     height: 100%;
 }
 
+
 /* #search_section_e {
     
 } */
-
 
 #home_name {
     display: flex;
@@ -307,14 +294,13 @@ form.login {
     font-size: 63px;
 }
 
-
 #home_icon {
     font-size: 44px;
     color: white;
     text-align: center;
     margin: 15px;
-
 }
+
 
 /* #map_container {
     position: relative;
@@ -331,8 +317,6 @@ form.login {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 16px;
-    
-
 }
 
 #right_side_nav {
@@ -341,24 +325,27 @@ form.login {
     height: 100%;
     width: 100%;
     margin: 15px;
-  
 }
+
 #search_form_nav_f {
     display: flex;
     height: 50%;
     margin: 27px;
 }
 
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #3b5d80;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: #3b5d80;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: #3b5d80;
 }
