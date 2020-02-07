@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+// var fs = require("fs");
 
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -49,5 +50,70 @@ module.exports = function (app) {
                 id: req.user.id
             });
         }
+    });
+    // app.post("/api/searched", function (req) {
+    //     // Take the request...
+    //     var searched = req.body;
+
+    //     fs.writeFile("log.txt", JSON.stringify(searched), function (err) {
+    //         console.log("api" + JSON.stringify(searched));
+    //         if (err) {
+    //             return console.log(err);
+    //         }
+
+    //         console.log("Success!");
+
+    //     });
+
+    // });
+    app.get("/api/parse/:search", function (req, res) {
+        // var chosenLocation;
+        // console.log(req.parmms.search)
+        // console.log(req.params.search)
+        const search_results = req.params.search;
+        // console.log(req)
+        require("dotenv").config();
+        const NodeGeocoder = require("node-geocoder");
+
+        const options = {
+            provider: process.env.GEOCODER_PROVIDER,
+
+            // Optional depending on the providers
+            httpAdapter: "https", // Default
+            apiKey: process.env.GEOCODER_API_KEY, // for Mapquest, OpenCage, Google Premier
+            formatter: null // 'gpx', 'string', ...
+        };
+
+
+        const geocoder = NodeGeocoder(options);
+
+        function getAddress(search_results) {
+            geocoder.geocode(search_results)
+                .then(function (data) {
+                    // console.log(res);
+                    //create an object that holds the user's inputed location
+                    var chosenLocation = {
+
+                        formattedAddress: data[0].formattedAddress,
+                        longitude: data[0].longitude,
+                        latitude: data[0].latitude,
+                        street: data[0].streetName,
+                        city: data[0].city,
+                        state: data[0].stateCode,
+                        zipcode: data[0].zipcode
+                    };
+                    // console.log(chosenLocation.formattedAddress);
+                    res.json(chosenLocation);
+                })
+
+                // return parse
+                .catch(function (err) {
+                    console.log(err);
+                });
+        }
+
+        getAddress(search_results);
+
+
     });
 };
