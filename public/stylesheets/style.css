@@ -184,6 +184,18 @@ form.login {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+#search_i_map {
+    font-size: 16px;
+    padding: 10px;
+    width: 600px;
+    border-radius: 15px;
+    color: #3b5d80;
+    border: 1px solid silver;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+
+}
+
 #name_logo {
     display: flex;
 }
@@ -251,6 +263,18 @@ form.login {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
+#search_b_map {
+    font-size: 16px;
+    padding: 10px;
+    width: 85px;
+
+    border-radius: 15px;
+    color: white;
+    background-color: #3b5d80;
+    border: 1px solid #3b5d80;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
 #search_b:hover {
     background-color: #f2f2f2;
     color: #3b5d80;
@@ -258,8 +282,18 @@ form.login {
     border: 0px;
 }
 
-#joined_l,
-#home_town_l {
+
+
+#search_b_map:hover {
+    background-color: #f2f2f2;
+    color: #3b5d80;
+    text-decoration: none;
+    border: 0px;
+}
+
+
+#joined_l, #home_town_l {
+
     margin: 20px 0px;
 }
 
@@ -274,6 +308,12 @@ form.login {
 #search_i:focus {
     outline: 0;
 }
+
+
+#search_i_map:focus {
+    outline:0;
+}
+
 
 #profile_section_s {
     background-color: white;
@@ -302,13 +342,14 @@ form.login {
 }
 
 
+
 /* #map_container {
     position: relative;
 }
 
-#search_form_map_f {
-    position: absolute;
-} */
+
+
+
 
 .nav_links {
     display: flex;
@@ -348,4 +389,31 @@ form.login {
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: #3b5d80;
+
+}
+
+
+#search_form_f_map {
+    z-index: 1;
+}
+
+
+.mapbox {
+    position:absolute;
+    left: 0;
+    top: 0;
+    z-index:-1;
+}
+
+#search_box {
+    position: absolute;
+    left: 25px;
+    top: 75px;
+    z-index: 1;
+}
+
+#map_container {
+    position: relative;
+    z-index: 0;
+
 }
