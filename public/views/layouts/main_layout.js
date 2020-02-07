@@ -17,6 +17,7 @@ module.exports = function(body,button,name){
         <link href="https://fonts.googleapis.com/css?family=Biryani:900|Jaldi:700&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <title>Livdin</title>
+        
     </head>
     
     <body>
