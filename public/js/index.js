@@ -17,6 +17,7 @@ const get_search_result = () => {
         const data = result;
         // console.log(data.formattedAddress);
         search_result = data.formattedAddress;
+        console.log(search_result);
         // var params = new URLSearchParams(window.location.search.slice(1));
         // const parsed = parser.parseLocation(search_result);
         // get_user_info(data.id);
@@ -44,16 +45,16 @@ search_form_f_e.on("submit", (event) => {
 
 
 /////function to get the user input for the axios call/////
-$("#search_b").on("click", function (event) {
-    event.preventDefault();
+// $("#search_b").on("click", function (event) {
+//     event.preventDefault();
 
-    var homeSearch = {
-        address: $("#search_i").val().trim()
-    };
-    console.log("index" + JSON.stringify(homeSearch));
-    $.post("api/searched", homeSearch)
-        .then(function (data) {
-            console.log(data);
-        });
-    location.href = "/map";
-});
+//     var homeSearch = {
+//         address: $("#search_i").val().trim()
+//     };
+//     console.log("index" + JSON.stringify(homeSearch));
+//     $.post("api/searched", homeSearch)
+//         .then(function (data) {
+//             console.log(data);
+//         });
+//     // location.href = "/map";
+// });
