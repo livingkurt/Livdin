@@ -19,7 +19,7 @@ module.exports = function (app) {
             password: req.body.password,
             username: req.body.username,
             name: req.body.name,
-            hometown: req.body.home_town,
+            hometown: req.body.hometown,
             bio: req.body.bio
         })
             .then(function () {

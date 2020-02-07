@@ -42,7 +42,7 @@ module.exports = function(app) {
         db.Review.create({
             address: req.body.address,
             rating: req.body.rating,
-            review: req.body.home_quality_review,
+            review: req.body.review,
             user_id: req.body.user_id
             // This is probably not correct - need Review.user_id to equal logged in User.id
         }).then(function(dbReview) {
