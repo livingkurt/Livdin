@@ -348,9 +348,7 @@ form.login {
 
 }
 
-/* #map_container {
-    position: relative;
-}
+
 
 #search_form_map_f {
     position: absolute;
@@ -393,4 +391,28 @@ form.login {
 
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #3b5d80;
+}
+
+
+#search_form_f_map {
+    z-index: 1;
+}
+
+
+.mapbox {
+    position:absolute;
+    left: 0;
+    top: 0;
+    z-index:-1;
+}
+
+#search_box {
+    position: absolute;
+    left: 25px;
+    top: 75px;
+    z-index: 1;
+}
+#map_container {
+    position: relative;
+    z-index: 0;
 }
