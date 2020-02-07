@@ -83,7 +83,7 @@ window.onload = function() {
             popup.setContent(`${street}, ${city}, ${state} <p><a href="#ex1" rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`);
         }
 
-        var customPopup = L.popup({ closeButton: false })
+        L.popup({ closeButton: false })
             .setLatLng(latLng)
             .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="#ex1" rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`)
             .openOn(map);
