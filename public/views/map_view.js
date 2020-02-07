@@ -37,9 +37,9 @@ module.exports = function(){
     return `
     <div>
         <div id="map_container">
-            <form class="overlay"id="search_form_map_f" autocomplete="on">
-                <input onfocus="this.placeholder = ''" onblur="this.placeholder='Address, Neighborhood, City, County'" type="text" name="" id="search_i" placeholder="Address, Neighborhood, City, County">
-                <button target="_self" id="search_b">Search</button>
+            <form class="overlay"id="search_form_f_map" autocomplete="on">
+                <input onfocus="this.placeholder = ''" onblur="this.placeholder='Address, Neighborhood, City, County'" type="text" name="" id="search_i_map" placeholder="Address, Neighborhood, City, County">
+                <button target="_self" id="search_b_map">Search</button>
             </form>
             <div class="overlay" id="search_results">
                 <p id="address_search"for="">Address:</p>
