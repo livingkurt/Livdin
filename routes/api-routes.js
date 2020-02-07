@@ -102,7 +102,6 @@ module.exports = function (app) {
                             "radius": "10",
                             "sort": "relevance",
                             "state_code": chosenLocation.state,
-                            "limit": "3",
                             "city": chosenLocation.city,
                             "offset": "0"
                         }
