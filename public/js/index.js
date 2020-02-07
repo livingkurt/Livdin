@@ -16,7 +16,7 @@ const get_search_result = () => {
     $.get(`/api/parse/${search_result}`).then(function (result) {
         const data = result;
         // console.log(data.formattedAddress);
-        search_result = data.formattedAddress
+        search_result = data.formattedAddress;
         // var params = new URLSearchParams(window.location.search.slice(1));
         // const parsed = parser.parseLocation(search_result);
         // get_user_info(data.id);
@@ -35,7 +35,7 @@ const get_search_result = () => {
     // console.log(params.get())
 };
 
-const print = x => console.log(x);
+// const print = x => console.log(x);
 
 search_form_f_e.on("submit", (event) => {
     event.preventDefault();
