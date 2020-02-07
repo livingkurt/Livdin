@@ -350,9 +350,7 @@ form.login {
 
 
 
-#search_form_map_f {
-    position: absolute;
-} */
+
 
 .nav_links {
     display: flex;
@@ -412,6 +410,7 @@ form.login {
     top: 75px;
     z-index: 1;
 }
+
 #map_container {
     position: relative;
     z-index: 0;
