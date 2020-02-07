@@ -12,7 +12,8 @@ window.onload = function() {
     console.log(search_result);
     $.get(`/api/parse/${search_result}`).then(function(result) {
         const data = result;
-        console.log(data.realtor);
+        // console.log(data.realtor);
+        create_elements(data.realtor)
         console.log(data.chosenLocation.formattedAddress);
         const street = data.chosenLocation.street;
         const city = data.chosenLocation.city;
@@ -25,7 +26,9 @@ window.onload = function() {
 
     });
 
-
+    const create_elements = (data) => {
+        data.listings.forEach(v => console.log(v));
+    };
 
 
     //Run function create map using the user location
