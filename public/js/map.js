@@ -1,5 +1,5 @@
 
-window.onload = function () {
+window.onload = function() {
     //Initiate API key
     L.mapquest.key = "nkL6LFerG2cvr74dIKmAFOfVpGn5ACIZ";
     var pathArray = window.location.pathname.split("/");
@@ -81,7 +81,7 @@ window.onload = function () {
             var street = location.street;
             var city = location.adminArea5;
             var state = location.adminArea3;
-            popup.setContent(street + ", " + city + ", " + state);
+            popup.setContent(`${street}, ${city}, ${state} <p><a href="#ex1" rel="modal:open">Add Review</a></p>`);
         }
 
         //This creates a custom marker on the map

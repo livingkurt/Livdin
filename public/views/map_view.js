@@ -1,5 +1,3 @@
-
-
 module.exports = function () {
     return `
     <div>
@@ -12,7 +10,15 @@ module.exports = function () {
             </div>
             <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div>
         </div>
-        
+
+        <div class="mapbox"id="map" style="width: 100%; height: 100vh;">
+        <!-- modal -->
+        <div id="ex1" class="modal">
+            <p>THIS IS WHERE WE ADD OUR REVIEW FORM.</p>
+            <a href="#" rel="modal:close">Close</a>
+        </div>
+        </div>
+
     </div>
     
     
@@ -23,4 +29,4 @@ module.exports = function () {
     `;
 };
 
-{/* <script src="../js/map.js"></script> */ }
+{ /* <script src="../js/map.js"></script> */ }
