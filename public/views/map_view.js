@@ -52,9 +52,6 @@ module.exports = function(){
         <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div>
     </div>
     
-    <footer id="footer">
-
-    </footer>
     
     <script src="../js/map.js"></script>
 </body>

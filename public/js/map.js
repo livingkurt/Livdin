@@ -6,6 +6,9 @@ window.onload = function() {
 
     console.log(pathArray[2]);
     let search_result = pathArray[2].split("%20").join(" ");
+    if (search_result === undefined){
+        return search_result = "Austin, TX";
+    }
     console.log(search_result);
     $.get(`/api/parse/${search_result}`).then(function(result) {
         const data = result;
