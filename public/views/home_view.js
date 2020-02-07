@@ -27,3 +27,5 @@ module.exports = function(){
 </html>
 `;
 };
+
+{/* <a class="nav_link" href="/map">Search</a> */}
