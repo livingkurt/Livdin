@@ -41,8 +41,6 @@ module.exports = function(app) {
         // res.sendFile(path.join(__dirname, "../public/html/map.html"));
         if (req.user) {
             // res.redirect("/members");
-            // return res.send(main_layout(map_view(map_script_view()), "members", "Profile"));
-
             return res.send(main_layout(map_view(), "members", "Profile"));
 
         }
