@@ -18,9 +18,6 @@ module.exports = function(){
         </section>
 
     </main>
-    <footer id="footer">
-
-    </footer>
     <script src="../js/index.js"></script>
 </body>
 

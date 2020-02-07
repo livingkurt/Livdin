@@ -7,11 +7,11 @@ module.exports = function(){
                 <form class="signup">
                     <div class="">
                         <label class="form_labels"for="exampleInputEmail1">Email address</label>
-                        <input onfocus="this.placeholder = ''"type="email" class="all_inputs_i" id="email-input" onblur="this.placeholder='Email'" placeholder="Email">
+                        <input autocomplete="email" onfocus="this.placeholder = ''"type="email" class="all_inputs_i" id="email-input" onblur="this.placeholder='Email'" placeholder="Email">
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputPassword1">Password</label>
-                        <input onfocus="this.placeholder = ''"type="password" class="all_inputs_i" id="password-input" onblur="this.placeholder='Password'" placeholder="Password">
+                        <input autocomplete="password" onfocus="this.placeholder = ''"type="password" class="all_inputs_i" id="password-input" onblur="this.placeholder='Password'" placeholder="Password">
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputUsername1">Username</label>
@@ -44,9 +44,6 @@ module.exports = function(){
             </div>
         </div>
     </div>
-    <footer id="footer">
-
-    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/signup.js"></script>

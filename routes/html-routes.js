@@ -38,6 +38,7 @@ module.exports = function (app) {
         }
         res.send(main_layout(map_view(), "login", "Login"));
     });
+    
 
     app.get("/invite-friends", function (req, res) {
     // If the user already has an account send them to the members page
