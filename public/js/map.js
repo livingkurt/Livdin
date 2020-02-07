@@ -1,14 +1,27 @@
 
-window.onload = function() {
+window.onload = function () {
+
+    const search_i_e = $("#search_i_map");
+    const search_form_f_e = $("#search_form_f_map");
+
+    const get_search_result = () => {
+        let search_result = search_i_e.val();
+        // search_result = search_result.replace(/[^\w\s]/gi, "");
+        // window.open(`/map/${search_result}`, "_self");
+        parse_address(search_result)
+
+    };
+
     //Initiate API key
     L.mapquest.key = "nkL6LFerG2cvr74dIKmAFOfVpGn5ACIZ";
+
+    // const parse_address = search_result => {
+
+
     var pathArray = window.location.pathname.split("/");
 
     console.log(pathArray[2]);
     let search_result = pathArray[2].split("%20").join(" ");
-    if (search_result === undefined) {
-        return search_result = "Austin, TX";
-    }
     console.log(search_result);
     $.get(`/api/parse/${search_result}`).then(function (result) {
         const data = result;
@@ -25,6 +38,7 @@ window.onload = function() {
         console.log(zipcode);
 
     });
+    // }
 
     const create_elements = (data) => {
         const map_container_e = $("#search_box_results");
@@ -95,4 +109,8 @@ window.onload = function() {
         }).addTo(map);
 
     }
+    search_form_f_e.on("submit", (event) => {
+        event.preventDefault();
+        get_search_result();
+    });
 };
