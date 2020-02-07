@@ -133,6 +133,16 @@ form.login {
     text-align: center;
     border-radius: 15px 15px 0px 0px;
 }
+#realtor_images {
+    height: 100px;
+    display: block;
+    border-radius: 15px;
+}
+
+#div_d {
+    /* display: flex; */
+    width: 405px;
+}
 
 .mapbox {
     position: relative;
@@ -163,6 +173,7 @@ form.login {
     margin-top: 20px;
     width: 598px;
     top: 52px;
+    display: flex;
     
 }
 
