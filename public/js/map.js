@@ -1,4 +1,3 @@
-
 window.onload = function() {
     //Initiate API key
     L.mapquest.key = "nkL6LFerG2cvr74dIKmAFOfVpGn5ACIZ";
@@ -10,7 +9,7 @@ window.onload = function() {
         return search_result = "Austin, TX";
     }
     console.log(search_result);
-    $.get(`/api/parse/${search_result}`).then(function (result) {
+    $.get(`/api/parse/${search_result}`).then(function(result) {
         const data = result;
         console.log(data.realtor);
         create_elements(data.realtor);
@@ -71,7 +70,7 @@ window.onload = function() {
 
 
         //Creates a reverse geo code per click
-        map.on("click", function (e) {
+        map.on("click", function(e) {
             popup.setLatLng(e.latlng).openOn(this);
             L.mapquest.geocoding().reverse(e.latlng, generatePopupContent);
         });
@@ -81,18 +80,13 @@ window.onload = function() {
             var street = location.street;
             var city = location.adminArea5;
             var state = location.adminArea3;
-            popup.setContent(`${street}, ${city}, ${state} <p><a href="#ex1" rel="modal:open">Add Review</a></p>`);
+            popup.setContent(`${street}, ${city}, ${state} <p><a href="#ex1" rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`);
         }
 
-        //This creates a custom marker on the map
-        var customIcon = L.mapquest.icons.circle({
-            primaryColor: "#3b5998"
-        });
-
-        //This attaches the marker to the map
-        L.marker(latLng, {
-            icon: customIcon
-        }).addTo(map);
+        L.popup({ closeButton: false })
+            .setLatLng(latLng)
+            .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="#ex1" rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`)
+            .openOn(map);
 
     }
 };
