@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var fs = require("fs");
 
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -50,7 +51,19 @@ module.exports = function (app) {
             });
         }
     });
-
+    app.post("/api/searched", function (req) {
+        // Take the request...
+        var searched = req.body;
+        
+        fs.writeFile("log.txt", JSON.stringify(searched), function(err) {
+            console.log("api" + JSON.stringify(searched));
+            if (err) {
+                return console.log(err);
+            }
+          
+            console.log("Success!");
+          
+        });
     app.get("/api/parse/:search", function (req, res) {
         // var chosenLocation;
         // console.log(req.parmms.search)
@@ -99,6 +112,9 @@ module.exports = function (app) {
     
         getAddress(search_results);
 
-        
+       
     });
 };
+
+
+
