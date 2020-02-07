@@ -163,7 +163,7 @@ form.login {
 }
 
 
-#reviews_d {
+.reviews_d {
     border: 1px silver solid;
     padding: 20px;
     border-radius: 15px;
