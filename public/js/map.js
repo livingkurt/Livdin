@@ -27,16 +27,18 @@ window.onload = function () {
     });
 
     const create_elements = (data) => {
-        const map_container_e = $("#map_container");
+        const map_container_e = $("#search_box");
         data.listings.forEach(listing => {
             const search_results_e = $("<div>");
             const address_search_e = $("<p>");
             // const rating_search_e = $("<p>");
             const square_foot_e = $("<p>");
             const bath_e = $("<p>");
+            const image_e = $("<img>");
             search_results_e.attr("id", "search_results");
+            image_e.attr("id", "realtor_images");
+            image_e.attr("src", listing.photo);
             address_search_e.attr("id", "address_search");
-            // rating_search_e.attr("id", "rating_search");
             square_foot_e.attr("id", "square_foot");
             bath_e.attr("id", "bath");
             address_search_e.text("Address " + listing.address);
@@ -45,16 +47,11 @@ window.onload = function () {
             bath_e.text("Beds " + listing.beds);
 
 
-            search_results_e.append(address_search_e, square_foot_e, bath_e);
+
+            search_results_e.append(address_search_e, square_foot_e, bath_e, image_e);
             map_container_e.append(search_results_e);
-            // console.log(listing);
-        }
-        );
+        });
     };
-
-
-    //Run function create map using the user location
-    // const start_map = () => {
     L.mapquest.geocoding().geocode(search_result, createMap);
 
     //Function to create map
@@ -99,4 +96,3 @@ window.onload = function () {
 
     }
 };
-// }
