@@ -43,13 +43,13 @@ search_form_f_e.on("submit", (event) => {
 $("#search_b").on("click", function (event) {
     event.preventDefault();
 
-    var homeSearch = $("#search_i").val().trim();
-
+    var homeSearch = {
+        address: $("#search_i").val().trim()
+    };
+    console.log("index" + JSON.stringify(homeSearch));
     $.post("api/searched", homeSearch)
         .then(function (data) {
-            // log the data we found
             console.log(data);
         });
-
-    // ("#search_i").val("");
+    location.href = "/map";
 });
