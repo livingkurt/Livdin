@@ -7,7 +7,7 @@ const search_form_f_e = $("#search_form_f_map");
 // console.log(search_result);
 
 const parse_address = (search_result) => {
-    console.log(search_result)
+    console.log(search_result);
     $.get(`/api/parse/${search_result}`).then(function (result) {
         const data = result;
         console.log(data.realtor);
@@ -65,7 +65,7 @@ function get_city_from_coord(lat, lon) {
         L.mapquest.geocoding().geocode(search, createMap);
 
     });
-};
+}
 
 const create_elements = (data) => {
     const map_container_e = $("#search_box_results");
@@ -77,7 +77,7 @@ const create_elements = (data) => {
         const div_d = $("<div>");
         const image_e = $("<img>");
         search_results_e.attr("id", "search_results");
-        search_results_e.attr("data-name", listing.address)
+        search_results_e.attr("data-name", listing.address);
         image_e.attr("id", "realtor_images");
         div_d.attr("id", "div_d");
         image_e.attr("src", listing.photo);
@@ -88,7 +88,7 @@ const create_elements = (data) => {
         // rating_search_e.text("Rating " + listing.rank);
         square_foot_e.text("Sqft " + listing.sqft);
         bath_e.text("Beds " + listing.beds);
-        div_d.append(address_search_e, square_foot_e, bath_e)
+        div_d.append(address_search_e, square_foot_e, bath_e);
         search_results_e.append(div_d, image_e);
         map_container_e.append(search_results_e);
     });
@@ -152,7 +152,7 @@ const search = () => {
         // L.mapquest.geocoding().geocode(search_result, createMap);
     }
     return search_result;
-}
+};
 search();
 
 
@@ -173,12 +173,12 @@ search_form_f_e.on("submit", (event) => {
 
 
 
-$(document).on('click', '#search_results', function(event) {
+$(document).on("click", "#search_results", function() {
     // If you are on the meals.html page
-    const address = $(this).attr("data-name")
-    console.log($(this).attr("data-name"));
+    const address = $(this).attr("data-name");
+    console.log(address);
     // L.popup().setLatLng(e.latlng).openOn(this);
     // L.mapquest.geocoding().reverse(address, generatePopupContent);
 
 
-})
+});
