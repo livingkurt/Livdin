@@ -39,6 +39,9 @@ module.exports = function(app) {
 
     // API route to post new review
     app.post("/api/reviews", function(req, res) {
+        if(!req.user) {
+            res.redirect("/login");
+        }
         db.Review.create({
             address: req.body.address,
             rating: req.body.rating,
