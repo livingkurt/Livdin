@@ -77,6 +77,7 @@ const create_elements = (data) => {
         const div_d = $("<div>");
         const image_e = $("<img>");
         search_results_e.attr("id", "search_results");
+        search_results_e.attr("data-name", listing.address)
         image_e.attr("id", "realtor_images");
         div_d.attr("id", "div_d");
         image_e.attr("src", listing.photo);
@@ -155,12 +156,6 @@ const search = () => {
 search();
 
 
-
-
-
-
-
-
 const get_search_result = () => {
     let search_result = search_i_e.val();
     console.log(search_result);
@@ -175,3 +170,15 @@ search_form_f_e.on("submit", (event) => {
     event.preventDefault();
     get_search_result();
 });
+
+
+
+$(document).on('click', '#search_results', function(event) {
+    // If you are on the meals.html page
+    const address = $(this).attr("data-name")
+    console.log($(this).attr("data-name"));
+    // L.popup().setLatLng(e.latlng).openOn(this);
+    // L.mapquest.geocoding().reverse(address, generatePopupContent);
+
+
+})
