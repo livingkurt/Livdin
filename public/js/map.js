@@ -1,5 +1,3 @@
-
-
 window.onload = function () {
 
     const search_i_e = $("#search_i_map");
