@@ -8,6 +8,7 @@
 
 
 const address_header_h_e = $("#address_header_h");
+const reviews_here_h = $("#reviews_here_h");
 // const joined_l_e = $("#joined_l");
 // const home_town_l_e = $("#home_town_l");
 // const description_p_e = $("#description_p");
@@ -51,6 +52,7 @@ const update_profile = (data, date_r) => {
     address_header_h_e.text(address);
     console.log(data);
     for (let i = 0; i < data.length; i++) {
+        reviews_here_h.attr("style", "display: none;");
         reviews_r.append(`<div class="reviews_d"><p>Date Created: ${date_r}</p>
         <p>Address: ${data[i].address}</p>
         <p>Rating: ${data[i].rating} / 5</p>
