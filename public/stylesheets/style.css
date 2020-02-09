@@ -208,6 +208,10 @@ form.login {
 
 }
 
+#logo_reviews_img {
+    height: 94px;
+}
+
 #name_logo {
     display: flex;
 }
@@ -241,6 +245,14 @@ form.login {
     display: flex;
     flex-direction: column;
     width: 80%;
+    /* padding: 50px; */
+    /* width: 50%; */
+}
+
+#get_review_container_d {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
     /* padding: 50px; */
     /* width: 50%; */
 }

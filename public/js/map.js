@@ -124,15 +124,17 @@ const createMap = (error, response) => {
         // var street = location.latitude;
         // var street = location.log;
         var street = location.street;
+
         var city = location.adminArea5;
         var state = location.adminArea3;
-        popup.setContent(`${street}, ${city}, ${state} <p><a href="/write-review/${street}, ${city}, ${state}" id="write_rev" el="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`);
+        popup.setContent(`${street}, ${city}, ${state} <p><a href="/write-review/${street}, ${city}, ${state}" id="write_rev" >Write Review</a></p> <p><a href="/get-review/${street}, ${city}, ${state}" >Get Review</a></p>`);
     };
 
-
+    var pathArray = window.location.pathname.split("/");
+    let search_result = pathArray[2].split("%20").join(" ");
     L.popup({ closeButton: false })
         .setLatLng(latLng)
-        .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="/write-review" id="write_rev"  rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`)
+        .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="/write-review/${search_result}" id="write_rev"  >Write Review</a></p> <p><a href="/get-review/${search_result}">Get Review</a></p>`)
         .openOn(map);
 };
 

@@ -89,6 +89,7 @@ module.exports = function (app) {
                     };
                     // console.log(chosenLocation.formattedAddress);
                     // res.json(chosenLocation);
+                    // ee6b62ee4amshafea3e45f16c03ap17677fjsn293316618b80
                     axios({
                         "method": "GET",
                         "url": "https://realtor.p.rapidapi.com/properties/list-for-rent",
