@@ -24,8 +24,10 @@ const parse_address = (search_result) => {
         console.log(city);
         console.log(state);
         console.log(zipcode);
-
+        // return result;
     });
+    // return function()
+
 };
 
 
@@ -70,13 +72,17 @@ function get_city_from_coord(lat, lon) {
 
 const create_elements = (data) => {
     const map_container_e = $("#search_box_results");
+    map_container_e.attr("style", "display: block");
     data.listings.forEach(listing => {
         const search_results_e = $("<div>");
+        
+        
         const address_search_e = $("<p>");
         const square_foot_e = $("<p>");
         const bath_e = $("<p>");
         const div_d = $("<div>");
         const image_e = $("<img>");
+        
         search_results_e.attr("id", "search_results");
         search_results_e.attr("data-name", listing.address);
         image_e.attr("id", "realtor_images");
@@ -89,6 +95,7 @@ const create_elements = (data) => {
         // rating_search_e.text("Rating " + listing.rank);
         square_foot_e.text("Sqft " + listing.sqft);
         bath_e.text("Beds " + listing.beds);
+        
         div_d.append(address_search_e, square_foot_e, bath_e);
         search_results_e.append(div_d, image_e);
         map_container_e.append(search_results_e);
@@ -132,6 +139,8 @@ const createMap = (error, response) => {
 
     var pathArray = window.location.pathname.split("/");
     let search_result = pathArray[2].split("%20").join(" ");
+    console.log(parse_address(search_result));
+    
     L.popup({ closeButton: false })
         .setLatLng(latLng)
         .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="/write-review/${search_result}" id="write_rev"  >Write Review</a></p> <p><a href="/get-review/${search_result}">Get Review</a></p>`)

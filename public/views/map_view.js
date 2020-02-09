@@ -10,31 +10,10 @@ module.exports = function () {
             </div>
             <div id="search_box_results">
             </div>
-            <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div>
+            <div class="mapbox"id="map" style="width: 100%; height: 94vh;"></div>
         </div>
 
-        <div class="mapbox"id="map" style="width: 100%; height: 100vh;">
-        <!-- modal 
-        <div id="ex1" class="modal">
-            <h4 class="form_header">Write a review for this property!</h4>
-                <form class="signup">
-                    <div class="">
-                        <label id="revAddress" class="form_labels"for="address">Address</label>
-                    </div>
-                    <div class="">
-                        <label class="form_labels"for="exampleInputPassword1">Overall Rating Out of 5</label>
-                        <input onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="rating-input" onblur="this.placeholder='Rating'" placeholder="Rating">
-                    </div>
-                    <div class="">
-                        <label class="form_labels"for="exampleInputUsername1">Detailed Review</label>
-                        <input onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="review-input" onblur="this.placeholder='Review'" placeholder="Review">
-                    </div>
-                    <button id="submitBtn" class="all_buttons_b" type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <a href="#" rel="modal:close">Close</a>
-            </div>
-        </div> -->
-
+        
     </div>
     
     
@@ -47,3 +26,4 @@ module.exports = function () {
 };
 
 { /* <script src="../js/map.js"></script> */ }
+{/* <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div> */}
