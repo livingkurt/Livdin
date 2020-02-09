@@ -43,7 +43,7 @@ module.exports = function(app) {
             address: req.body.address,
             rating: req.body.rating,
             review: req.body.review,
-            UserId: 1
+            UserId: req.body.UserId
             // This is probably not correct - need Review.user_id to equal logged in User.id
         }).then(function(dbReview) {
             res.json(dbReview);

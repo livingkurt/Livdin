@@ -60,7 +60,7 @@ function get_city_from_coord(lat, lon) {
     $.ajax({ url: queryURL, method: "GET" }).then(function (response) {
         var city = response.address.city;
         var state = response.address.state;
-        const search = city + " " +state;
+        const search = city + " " + state;
         // console.log(search);
         parse_address(search);
         L.mapquest.geocoding().geocode(search, createMap);
@@ -126,23 +126,34 @@ const createMap = (error, response) => {
         var street = location.street;
         var city = location.adminArea5;
         var state = location.adminArea3;
-        popup.setContent(`${street}, ${city}, ${state} <p><a href="#ex1" rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`);
+        popup.setContent(`${street}, ${city}, ${state} <p><a href="/write-review/${street}, ${city}, ${state}" id="write_rev" el="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`);
     };
 
 
     L.popup({ closeButton: false })
         .setLatLng(latLng)
-        .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="#ex1" rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`)
+        .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="/write-review" id="write_rev"  rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`)
         .openOn(map);
 
+    // $("#see_rev").on("click", function() {
+    //     window.location.replace("/login");
+    // });
 
+    // $("#write_rev").on("click", function () {
+    //     console.log("Hello");
+    //     const address = $(this.parentElement).attr("data-name");
+    //     console.log(address);
+    //     window.location.replace(`/write-review/hello`);
+    // });
 };
+
+
 
 const search = () => {
     var pathArray = window.location.pathname.split("/");
     // console.log(pathArray[2]);
     let search_result = pathArray[2].split("%20").join(" ");
-    
+
     if (search_result === "current_location") {
         getLocation();
         // L.mapquest.geocoding().geocode(search_result, createMap);
@@ -167,6 +178,7 @@ const get_search_result = () => {
 };
 
 
+
 search_form_f_e.on("submit", (event) => {
     event.preventDefault();
     get_search_result();
@@ -174,12 +186,38 @@ search_form_f_e.on("submit", (event) => {
 
 
 
-$(document).on("click", "#search_results", function() {
-    // If you are on the meals.html page
-    const address = $(this).attr("data-name");
-    console.log(address);
-    // L.popup().setLatLng(e.latlng).openOn(this);
-    // L.mapquest.geocoding().reverse(address, generatePopupContent);
+// $(document).on("click", "#search_results", function () {
+//     // If you are on the meals.html page
+//     const address = $(this).attr("data-name");
+//     console.log(address);
+//     // L.popup().setLatLng(e.latlng).openOn(this);
+//     // L.mapquest.geocoding().reverse(address, generatePopupContent);
 
 
-});
+// });
+
+// $(document).on("click", ".leaflet-popup", function () {
+//     // If you are on the meals.html page
+//     const address = $(this).text();
+//     console.log(address);
+//     // L.popup().setLatLng(e.latlng).openOn(this);
+//     // L.mapquest.geocoding().reverse(address, generatePopupContent);
+
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
