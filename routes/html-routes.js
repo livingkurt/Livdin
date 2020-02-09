@@ -11,6 +11,7 @@ const signup_view = require("../public/views/signup_view");
 const login_view = require("../public/views/login_view");
 const invite_friends_view = require("../public/views/invite_friends_view");
 const write_review_view = require("../public/views/write_review_view");
+const get_review_view = require("../public/views/get_review_view");
 
 module.exports = function (app) {
 
@@ -71,6 +72,14 @@ module.exports = function (app) {
         }
         
         res.send(main_layout(login_view(), "login", "Login"));
+    });
+
+    app.get("/get-review/:address", function (req, res) {
+        if (req.user) {
+            return res.send(main_layout(get_review_view(), "profile", "Profile"));
+        }
+        
+        res.send(main_layout(get_review_view(), "login", "Login"));
     });
 
 };

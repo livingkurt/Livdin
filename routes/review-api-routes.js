@@ -27,10 +27,10 @@ module.exports = function(app) {
     });
 
     // API route to get all reviews for certain address
-    app.get("/api/reviews", function(req, res) {
+    app.get("/api/reviews/:address", function(req, res) {
         db.Review.findAll({
             where: {
-                address: req.body.address
+                address: req.params.address
             }
         }).then(function(dbReviews) {
             res.json(dbReviews);
