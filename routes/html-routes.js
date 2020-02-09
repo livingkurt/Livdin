@@ -10,6 +10,7 @@ const map_view = require("../public/views/map_view");
 const signup_view = require("../public/views/signup_view");
 const login_view = require("../public/views/login_view");
 const invite_friends_view = require("../public/views/invite_friends_view");
+const write_review_view = require("../public/views/write_review_view");
 
 module.exports = function (app) {
 
@@ -64,4 +65,14 @@ module.exports = function (app) {
         res.send(main_layout(profile_view(), "logout", "Logout"));
     });
 
+    app.get("/write-review/:address", function (req, res) {
+        if (req.user) {
+            return res.send(main_layout(write_review_view(), "profile", "Profile"));
+        }
+        
+        res.send(main_layout(login_view(), "login", "Login"));
+    });
+
 };
+
+

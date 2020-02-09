@@ -39,14 +39,11 @@ module.exports = function(app) {
 
     // API route to post new review
     app.post("/api/reviews", function(req, res) {
-        if(!req.user) {
-            res.redirect("/login");
-        }
         db.Review.create({
             address: req.body.address,
             rating: req.body.rating,
             review: req.body.review,
-            UserId: req.user.id
+            UserId: req.body.UserId
             // This is probably not correct - need Review.user_id to equal logged in User.id
         }).then(function(dbReview) {
             res.json(dbReview);

@@ -14,7 +14,7 @@ module.exports = function () {
         </div>
 
         <div class="mapbox"id="map" style="width: 100%; height: 100vh;">
-        <!-- modal -->
+        <!-- modal 
         <div id="ex1" class="modal">
             <h4 class="form_header">Write a review for this property!</h4>
                 <form class="signup">
@@ -33,7 +33,7 @@ module.exports = function () {
                 </form>
                 <a href="#" rel="modal:close">Close</a>
             </div>
-        </div>
+        </div> -->
 
     </div>
     
