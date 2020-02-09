@@ -47,7 +47,7 @@ const update_profile = (data, date, date_r) => {
     // reviews_d_e.text(data.name);
     
     for(let i = 0; i < data.Reviews.length; i++) {
-        reviews_here_h.attr("style", "display: none;")
+        reviews_here_h.attr("style", "display: none;");
         reviews_r.append(`<div class="reviews_d"><p>Date Created: ${date_r}</p>
         <p>Address: ${data.Reviews[i].address}</p>
         <p>Rating: ${data.Reviews[i].rating} / 5</p>

@@ -190,7 +190,7 @@ $(document).on("click", "#search_results", function () {
 
     console.log(address);
 
-    $(this)
+    $(this);
     copyToClipboard(address);
     // L.popup().setLatLng(e.latlng).openOn(this);
     // L.mapquest.geocoding().reverse(address, generatePopupContent);
@@ -212,8 +212,8 @@ function copyToClipboard(text) {
     // dummy.value = text;
     // dummy.select();
     var dummyContent = text;
-    var dummy = $('<input>').val(dummyContent).appendTo('body').select();
-    document.execCommand('copy')
+    var dummy = $("<input>").val(dummyContent).appendTo("body").select();
+    document.execCommand("copy");
 }
 
 
