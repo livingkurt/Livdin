@@ -39,18 +39,11 @@ module.exports = function(app) {
 
     // API route to post new review
     app.post("/api/reviews", function(req, res) {
-        if(!req.user) {
-            res.redirect("/login");
-        }
         db.Review.create({
             address: req.body.address,
             rating: req.body.rating,
             review: req.body.review,
-<<<<<<< HEAD
             UserId: req.body.UserId
-=======
-            UserId: req.user.id
->>>>>>> parent of c813647... Got the reviews posting to database and got the re routed it to the login screen if they werent logged in and we also ran out of free realtor api calls, so I made a new account and added in the necessary information
             // This is probably not correct - need Review.user_id to equal logged in User.id
         }).then(function(dbReview) {
             res.json(dbReview);
