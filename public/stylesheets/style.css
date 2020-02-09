@@ -265,7 +265,7 @@ form.login {
 }
 
 #profile_image {
-    height: 234px;
+    height: 200px;
 }
 
 #get_review_container_d {
@@ -289,13 +289,7 @@ form.login {
     display: row;
 }
 
-#image_container_d {
-    /* width: 50%; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* padding: 34px; */
-}
+
 
 #search_b {
     font-size: 16px;
@@ -337,10 +331,21 @@ form.login {
 }
 
 
-#joined_l, #home_town_l {
+#reviews_here_h {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    font-size: 57px;
+    font-family: 'Jaldi', sans-serif;
+    color: #3b5d80;
+    margin: 0px;
+}
+
+/* #joined_l, #home_town_l {
 
     margin: 20px 0px;
-}
+} */
 
 #description_p {
     font-size: 16px;
@@ -363,6 +368,7 @@ form.login {
 #profile_section_s {
     background-color: white;
     height: 100%;
+    margin: 95px 200px 54px 200px;
 }
 
 

@@ -11,6 +11,7 @@ const profile_name_h_e = $("#profile_name_h");
 const joined_l_e = $("#joined_l");
 const home_town_l_e = $("#home_town_l");
 const description_p_e = $("#description_p");
+const reviews_here_h = $("#reviews_here_h");
 // const rev_date = $("#rev_date");
 // const rev_address = $("#rev_address");
 // const review_p = $("#review_p");
@@ -46,6 +47,7 @@ const update_profile = (data, date, date_r) => {
     // reviews_d_e.text(data.name);
     
     for(let i = 0; i < data.Reviews.length; i++) {
+        reviews_here_h.attr("style", "display: none;")
         reviews_r.append(`<div class="reviews_d"><p>Date Created: ${date_r}</p>
         <p>Address: ${data.Reviews[i].address}</p>
         <p>Rating: ${data.Reviews[i].rating} / 5</p>
