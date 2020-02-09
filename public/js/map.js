@@ -212,6 +212,7 @@ function copyToClipboard(text) {
     // dummy.value = text;
     // dummy.select();
     var dummyContent = text;
+    // eslint-disable-next-line no-unused-vars
     var dummy = $("<input>").val(dummyContent).appendTo("body").select();
     document.execCommand("copy");
 }
