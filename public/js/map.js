@@ -15,7 +15,7 @@ const parse_address = (search_result) => {
         create_elements(data.realtor);
         // L.mapquest.map.off();
         // L.mapquest.geocoding().geocode(search_result, createMap);
-        console.log(data.chosenLocation.formattedAddress);
+        // console.log(data.chosenLocation.formattedAddress);
         const street = data.chosenLocation.street;
         const city = data.chosenLocation.city;
         const state = data.chosenLocation.state;
@@ -61,7 +61,7 @@ function get_city_from_coord(lat, lon) {
         var city = response.address.city;
         var state = response.address.state;
         const search = city + " " +state;
-        console.log(search);
+        // console.log(search);
         parse_address(search);
         L.mapquest.geocoding().geocode(search, createMap);
 

@@ -20,21 +20,28 @@ $(document).ready(function () {
     });
 
     function submitReview(address, rating, review, UserId) {
-        $.post("/api/reviews", {
-            address: address,
-            rating: rating,
-            review: review,
-            UserId: UserId
-        })
-            .then(function () {
-                window.location.replace("/");
-                // If there's an error, handle it by throwing up a bootstrap alert
-            })
-            .catch(handleLoginErr);
+        $.get("/api/user_data", function (req, res) {
+            if (!req.id) {
+                window.location.replace("/login");
+            }
+        }).then(() => {
+            $.post("/api/reviews", {
+                address: address,
+                rating: rating,
+                review: review,
+                UserId: UserId
+            });
+
+        }).then(function () {
+        }).catch((handleLoginErr));
+
+
+
     }
-    
+
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
         $("#alert").fadeIn(500);
+        // res.redirect("/login");
     }
 });
