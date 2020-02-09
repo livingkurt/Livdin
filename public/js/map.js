@@ -187,7 +187,11 @@ search_form_f_e.on("submit", (event) => {
 $(document).on("click", "#search_results", function () {
     // If you are on the meals.html page
     const address = $(this).attr("data-name");
+
     console.log(address);
+
+    $(this);
+    copyToClipboard(address);
     // L.popup().setLatLng(e.latlng).openOn(this);
     // L.mapquest.geocoding().reverse(address, generatePopupContent);
 
@@ -203,6 +207,16 @@ $(document).on("click", "#search_results", function () {
 
 
 // });
+
+function copyToClipboard(text) {
+    // dummy.value = text;
+    // dummy.select();
+    var dummyContent = text;
+    // eslint-disable-next-line no-unused-vars
+    var dummy = $("<input>").val(dummyContent).appendTo("body").select();
+    document.execCommand("copy");
+}
+
 
 
 
