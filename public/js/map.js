@@ -134,17 +134,6 @@ const createMap = (error, response) => {
         .setLatLng(latLng)
         .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="/write-review" id="write_rev"  rel="modal:open">Write Review</a></p> <p><a href="#ex1" rel="modal:open">Get Review</a></p>`)
         .openOn(map);
-
-    // $("#see_rev").on("click", function() {
-    //     window.location.replace("/login");
-    // });
-
-    // $("#write_rev").on("click", function () {
-    //     console.log("Hello");
-    //     const address = $(this.parentElement).attr("data-name");
-    //     console.log(address);
-    //     window.location.replace(`/write-review/hello`);
-    // });
 };
 
 
@@ -156,12 +145,10 @@ const search = () => {
 
     if (search_result === "current_location") {
         getLocation();
-        // L.mapquest.geocoding().geocode(search_result, createMap);
     }
     else {
         parse_address(search_result);
         L.mapquest.geocoding().geocode(search_result, createMap);
-        // L.mapquest.geocoding().geocode(search_result, createMap);
     }
     return search_result;
 };

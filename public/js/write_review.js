@@ -12,7 +12,8 @@ $(document).ready(function () {
     // console.log(pathArray[2]);
     let address = pathArray[2].split("%20").join(" ");
 
-    $.get("/api/user_data", function (req, res) {
+    // eslint-disable-next-line no-unused-vars
+    $.get("/api/user_data", function (req, res) { 
         console.log(req.id);
         const user_id = req.id;
         revAddress.text("Address " + address);
@@ -27,10 +28,6 @@ $(document).ready(function () {
                 UserId: user_id
             };
             submitReview(userData.address, userData.rating, userData.review, userData.UserId);
-            // revAddress.val("");
-            // revRating.val("");
-            // revReview.val("");
-            // revUserId.val("");
         });
         function submitReview(address, rating, review, UserId) {
             $.post("/api/reviews", {
