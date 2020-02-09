@@ -96,7 +96,7 @@ module.exports = function (app) {
                         "headers": {
                             "content-type": "application/json",
                             "x-rapidapi-host": "realtor.p.rapidapi.com",
-                            "x-rapidapi-key": "ee6b62ee4amshafea3e45f16c03ap17677fjsn293316618b80"
+                            "x-rapidapi-key": "c2af293d6amshd4a685cf3934485p116053jsnf279e1f97883"
                         }, "params": {
                             "price_min": "1500",
                             "postal_code": chosenLocation.zipcode,

@@ -15,7 +15,7 @@ module.exports = function(){
                 </p>
             </div>
             <div id="image_container_d">
-                <img src="https://via.placeholder.com/200" alt="">
+                <img id="profile_image"src="../images/Livdin_Logo_Avatar.png" alt="">
             </div>
         </div>
         <div>

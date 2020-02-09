@@ -14,7 +14,7 @@ module.exports = function(){
                     </div>
                     <div class="">
                         <label class="form_labels"for="exampleInputUsername1">Detailed Review</label>
-                        <input style="height:200px" onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="review-input" onblur="this.placeholder='Review'" placeholder="Review">
+                        <textarea style="height:200px" onfocus="this.placeholder = ''"type="text" class="all_inputs_i" id="review-input" onblur="this.placeholder='Review'" placeholder="Review"></textarea>
                     </div>
                     <div class="">
                         <label id="review_id" class="form_labels"for="exampleInputPassword1">User ID</label>

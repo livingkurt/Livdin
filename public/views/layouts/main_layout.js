@@ -26,7 +26,7 @@ module.exports = function(body, button, name) {
     <body>
         <div id="nav">
             <div class="topnav">
-                <a href="/"><img src="" alt=""><img id="livdin_logo" src="../images/Livdin Logo_white.png" alt=""></a>
+                <a href="/"><img src="" alt=""><img id="livdin_logo" src="../images/Livdin_Logo_white.png" alt=""></a>
                 <div id="right_side_nav">
                     <a class="nav_links" href="/map/current_location">Discover</a>
                     <a class="nav_links" href="/${button}">${name}</a>
