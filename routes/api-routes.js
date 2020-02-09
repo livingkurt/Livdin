@@ -56,7 +56,7 @@ module.exports = function (app) {
         // console.log(req.parmms.search)
         // console.log(req.params.search)
         const search_results = req.params.search;
-        console.log(search_results)
+        // console.log(req)
         require("dotenv").config();
         const NodeGeocoder = require("node-geocoder");
 
@@ -87,9 +87,7 @@ module.exports = function (app) {
                         state: data[0].stateCode,
                         zipcode: data[0].zipcode
                     };
-                    console.log(chosenLocation.zipcode);
-                    console.log(chosenLocation.state);
-                    console.log(chosenLocation.city);
+                    // console.log(chosenLocation.formattedAddress);
                     // res.json(chosenLocation);
                     axios({
                         "method": "GET",
@@ -97,7 +95,7 @@ module.exports = function (app) {
                         "headers": {
                             "content-type": "application/json",
                             "x-rapidapi-host": "realtor.p.rapidapi.com",
-                            "x-rapidapi-key": "7048a14eadmshed29ef69b6b331ep113ca7jsnd70047b704a0"
+                            "x-rapidapi-key": "ee6b62ee4amshafea3e45f16c03ap17677fjsn293316618b80"
                         }, "params": {
                             "price_min": "1500",
                             "postal_code": chosenLocation.zipcode,
@@ -113,6 +111,7 @@ module.exports = function (app) {
                                 chosenLocation,
                                 realtor:response.data
                             });
+                            // res.son(main_layout(map_view(response.data.listings[0]), "profile", "Profile"));
                         })
                         .catch(error => {
                             console.log(error);
