@@ -184,15 +184,15 @@ search_form_f_e.on("submit", (event) => {
 
 
 
-// $(document).on("click", "#search_results", function () {
-//     // If you are on the meals.html page
-//     const address = $(this).attr("data-name");
-//     console.log(address);
-//     // L.popup().setLatLng(e.latlng).openOn(this);
-//     // L.mapquest.geocoding().reverse(address, generatePopupContent);
+$(document).on("click", "#search_results", function () {
+    // If you are on the meals.html page
+    const address = $(this).attr("data-name");
+    console.log(address);
+    // L.popup().setLatLng(e.latlng).openOn(this);
+    // L.mapquest.geocoding().reverse(address, generatePopupContent);
 
 
-// });
+});
 
 // $(document).on("click", ".leaflet-popup", function () {
 //     // If you are on the meals.html page
