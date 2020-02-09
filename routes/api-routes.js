@@ -90,33 +90,33 @@ module.exports = function (app) {
                     // console.log(chosenLocation.formattedAddress);
                     // res.json(chosenLocation);
                     // ee6b62ee4amshafea3e45f16c03ap17677fjsn293316618b80
-                    // axios({
-                    //     "method": "GET",
-                    //     "url": "https://realtor.p.rapidapi.com/properties/list-for-rent",
-                    //     "headers": {
-                    //         "content-type": "application/json",
-                    //         "x-rapidapi-host": "realtor.p.rapidapi.com",
-                    //         "x-rapidapi-key": "c2af293d6amshd4a685cf3934485p116053jsnf279e1f97883"
-                    //     }, "params": {
-                    //         "price_min": "1500",
-                    //         "postal_code": chosenLocation.zipcode,
-                    //         "radius": "10",
-                    //         "sort": "relevance",
-                    //         "state_code": chosenLocation.state,
-                    //         "city": chosenLocation.city,
-                    //         "offset": "0"
-                    //     }
-                    // })
-                    //     .then(response => {
-                    //         res.json({
-                    //             chosenLocation,
-                    //             realtor:response.data
-                    //         });
-                    //         // res.son(main_layout(map_view(response.data.listings[0]), "profile", "Profile"));
-                    //     })
-                    //     .catch(error => {
-                    //         console.log(error);
-                    //     });
+                    axios({
+                        "method": "GET",
+                        "url": "https://realtor.p.rapidapi.com/properties/list-for-rent",
+                        "headers": {
+                            "content-type": "application/json",
+                            "x-rapidapi-host": "realtor.p.rapidapi.com",
+                            "x-rapidapi-key": "c2af293d6amshd4a685cf3934485p116053jsnf279e1f97883"
+                        }, "params": {
+                            "price_min": "1500",
+                            "postal_code": chosenLocation.zipcode,
+                            "radius": "10",
+                            "sort": "relevance",
+                            "state_code": chosenLocation.state,
+                            "city": chosenLocation.city,
+                            "offset": "0"
+                        }
+                    })
+                        .then(response => {
+                            res.json({
+                                chosenLocation,
+                                realtor:response.data
+                            });
+                            // res.son(main_layout(map_view(response.data.listings[0]), "profile", "Profile"));
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
 
                 })
 
