@@ -17,8 +17,7 @@ module.exports = function () {
     </div>
     
     
-    <script src="../js/map.js"></script>
-    <script src="../js/map2.js"></script>
+    <script src="../dist/map_min.js"></script>
 </body>
 
 </html>

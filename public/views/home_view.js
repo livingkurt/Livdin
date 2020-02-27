@@ -1,5 +1,5 @@
-module.exports = function(){
-    return `
+module.exports = function () {
+  return `
     <main id="main">
         <section>
             <div>
@@ -25,4 +25,4 @@ module.exports = function(){
 `;
 };
 
-{/* <a class="nav_link" href="/map">Search</a> */}
+{/* <a class="nav_link" href="/map">Search</a> */ }

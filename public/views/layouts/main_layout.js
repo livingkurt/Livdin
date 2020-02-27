@@ -1,5 +1,5 @@
-module.exports = function(body, button, name) {
-    return `
+module.exports = function (body, button, name) {
+  return `
     <!DOCTYPE html>
     <html lang="en">
     
@@ -8,7 +8,7 @@ module.exports = function(body, button, name) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="../stylesheets/style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Julius+Sans+One|Sulphur+Point&display=swap"
             rel="stylesheet">
         <script src="https://kit.fontawesome.com/cc10a71280.js" crossorigin="anonymous"></script>
@@ -39,4 +39,4 @@ module.exports = function(body, button, name) {
 };
 
 { /* <a href="/"><i id="home_icon" class="fas fa-home"></i></a> */ }
-{/* <a class="nav_links" href="/invite-friends">Invite Friends</a> */}
+{/* <a class="nav_links" href="/invite-friends">Invite Friends</a> */ }

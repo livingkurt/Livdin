@@ -1,15 +1,15 @@
-module.exports = function(){
-    return `
+module.exports = function () {
+  return `
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="">
                 <h2 class="form_header">Login into Livdin!</h2>
                 <form class="login" autocomplete="on">
-                    <div class="">
+                    <div class="label_input">
                         <label class="form_labels"for="exampleInputEmail1">Email address</label>
                         <input onfocus="this.placeholder = ''"type="email" class="all_inputs_i" id="email-input" onblur="this.placeholder='Email'" placeholder="Email">
                     </div>
-                    <div class="">
+                    <div class="label_input">
                         <label class="form_labels"for="exampleInputPassword1">Password</label>
                         <input onfocus="this.placeholder = ''"type="password" class="all_inputs_i" id="password-input" onblur="this.placeholder='Password'" placeholder="Password">
                     </div>
