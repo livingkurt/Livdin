@@ -21,7 +21,7 @@ module.exports = function () {
     <script src="../js/index.js"></script>
 </body>
 
-</html>
+</html> 
 `;
 };
 
