@@ -1,8 +1,8 @@
-module.exports = function(){
-    return `
+module.exports = function () {
+  return `
     <main id="main">
 
-    <section id="profile_section_s">
+    <div id="profile_section_s">
         <div id="profile_upper_section">
             <div id="profile_container_d">
                 <header id="profile_name_h">Kurt</header id="">
@@ -24,7 +24,7 @@ module.exports = function(){
             </div>
         </div>
 
-    </section>
+    </div>
 
 </main>
 
