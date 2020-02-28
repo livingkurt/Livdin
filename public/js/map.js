@@ -61,8 +61,10 @@ function showPosition(position) {
   var lat = position.coords.latitude;
   var lon = position.coords.longitude;
   console.log("Your coordinates are Latitude: " + lat + " Longitude " + lon);
+  const lat_long = `${lat}, ${lon}`
   // return [lat, lon];
-  get_city_from_coord(lat, lon);
+  get_search_result(lat_long)
+  // get_city_from_coord(lat, lon);
 }
 
 function get_city_from_coord(lat, lon) {
