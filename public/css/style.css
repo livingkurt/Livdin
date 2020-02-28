@@ -458,7 +458,7 @@ form.login {
 }
 
 #search_box_results {
-  /* display: none; */
+  display: none;
   position: absolute;
   left: 25px;
   top: 225px;
@@ -780,9 +780,6 @@ input:checked+.slider:before {
   #search_results {
     /* font-size: 13px; */
     width: 285px;
-  }
-  #search_box_results {
-    /* top: 67px; */
   }
   .form_header {
     font-size: 20px;

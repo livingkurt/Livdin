@@ -184,10 +184,10 @@ $(document).ready(function () {
     var isChecked = $(this).is(':checked');
     if (isChecked) {
       // on_off = '#'
-      map_container_e.attr("style", "display: none");
+      map_container_e.attr("style", "display: block");
     } else {
       // on_off = '&'
-      map_container_e.attr("style", "display: block");
+      map_container_e.attr("style", "display: none");
     }
   });
 });

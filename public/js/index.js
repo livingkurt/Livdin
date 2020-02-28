@@ -3,6 +3,7 @@ const search_i_e = $("#search_i");
 const search_form_f_e = $("#search_form_f");
 const checkbox = $("#checkbox")
 const checkbox_div = $("#slider_container_div_m")
+const map_container_e = $("#search_box_results");
 
 let on_off = '&';
 
@@ -15,9 +16,11 @@ $(document).ready(function () {
     if (isChecked) {
       on_off = 'X'
       checkbox_div.attr("style", "display: block");
+      map_container_e.attr("style", "display: block");
     } else {
       on_off = '&'
       checkbox_div.attr("style", "display: none");
+      map_container_e.attr("style", "display: none");
     }
   });
 });

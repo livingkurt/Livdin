@@ -12,7 +12,7 @@ module.exports = function () {
             </div>
             <div class="mapbox"id="map" style="width: 100%; height: 94vh;"></div>
             <div id="slider_container_div_m">
-                <label id="slider_l_m">Slide to Hide Rentals</label>
+                <label id="slider_l_m">Slide to Show Rentals</label>
                 <label class="switch_m">
                   <input type="checkbox" id="checkbox">
                   <span class="slider round"></span>
