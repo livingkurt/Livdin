@@ -1,5 +1,5 @@
 module.exports = function () {
-    return `
+  return `
     <div>
         <div id="map_container">
             <div id="search_box_input">
@@ -11,13 +11,21 @@ module.exports = function () {
             <div id="search_box_results">
             </div>
             <div class="mapbox"id="map" style="width: 100%; height: 94vh;"></div>
+            <div id="slider_container_div_m">
+                <label id="slider_l_m">Slide to Hide Rentals</label>
+                <label class="switch_m">
+                  <input type="checkbox" id="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
         </div>
+        
 
         
     </div>
     
     
-    <script src="../dist/map_min.js"></script>
+    <script src="../js/map.js"></script>
 </body>
 
 </html>
@@ -25,4 +33,4 @@ module.exports = function () {
 };
 
 { /* <script src="../js/map.js"></script> */ }
-{/* <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div> */}
+{/* <div class="mapbox"id="map" style="width: 100%; height: 100vh;"></div> */ }

@@ -14,7 +14,16 @@ module.exports = function () {
             <form id="search_form_f" autocomplete="on">
                 <input onfocus="this.placeholder = ''" onblur="this.placeholder='Address, Neighborhood, City, County'" type="text" name="" id="search_i" placeholder="Address, Neighborhood, City, County">
                 <button target="_self" id="search_b">Search</button>
+                <!-- Rounded switch -->
+                
             </form>
+              <div id="slider_container_div">
+                <label id="slider_l">Slide to Search for Rentals</label>
+                <label class="switch">
+                  <input type="checkbox" id="checkbox">
+                  <span class="slider round home_slider"></span>
+                </label>
+              </div>
         </section>
 
     </main>

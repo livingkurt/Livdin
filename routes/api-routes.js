@@ -54,8 +54,13 @@ module.exports = function (app) {
   app.get("/api/parse/:search", function (req, res) {
     // var chosenLocation;
     // console.log(req.parmms.search)
-    // console.log(req.params.search)
-    const search_results = req.params.search;
+    // let search = req.params.search
+    // let search_2 = req.params.search
+    console.log(req.params.search)
+    const search_results = req.params.search.slice(0, -1);
+    console.log(search_results)
+    const get_rentals = req.params.search.slice(-1);
+    console.log(get_rentals)
     // console.log(req)
     require("dotenv").config();
     const NodeGeocoder = require("node-geocoder");
@@ -125,8 +130,10 @@ module.exports = function (app) {
           console.log(err);
         });
     }
+    if (get_rentals === 'X') {
+      getAddress(search_results);
+    }
 
-    getAddress(search_results);
 
 
   });
