@@ -1,8 +1,8 @@
-module.exports = function(){
-    return `
+module.exports = function () {
+  return `
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="">
                 <h2 class="form_header">Write a review for this property!</h2>
                 <form class="signup">
                     <div class="">
