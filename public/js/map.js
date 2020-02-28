@@ -193,8 +193,9 @@ $(document).ready(function () {
 });
 
 
-const get_search_result = () => {
-  let search_result = search_i_e.val();
+const get_search_result = (search_result) => {
+  // if(search_result)
+
   console.log(search_result);
   // search_result = search_result.replace(/[^\w\s]/gi, "");
   window.open(`/map/${search_result}`, "_self");
@@ -206,7 +207,8 @@ const get_search_result = () => {
 
 search_form_f_e.on("submit", (event) => {
   event.preventDefault();
-  get_search_result();
+  let search_result = search_i_e.val();
+  get_search_result(search_result);
 });
 
 
@@ -216,6 +218,7 @@ $(document).on("click", "#search_results", function () {
   const address = $(this).attr("data-name");
 
   console.log(address);
+  get_search_result(address)
 
   $(this);
   copyToClipboard(address);
