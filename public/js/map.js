@@ -8,17 +8,8 @@ const map_container_e = $("#search_box_results");
 
 let on_off = 0;
 
-// console.log(checkbox.val());
-
-// if ($(window).width() < 1000) {
-//   alert('Less than 960');
-// }
-// else {
-//   alert('More than 960');
-// }
-
 const parse_address = (search_result) => {
-  console.log(search_result.slice(0, -1));
+  // console.log(search_result.slice(0, -1));
   if (search_result.slice(-1) === '&') {
     checkbox.attr("style", "display: none");
   }
@@ -26,17 +17,16 @@ const parse_address = (search_result) => {
 
   $.get(`/api/parse/${search_result}`).then(function (result) {
     const data = result;
-    console.log(data.realtor);
-    create_elements(data.realtor);
-    console.log(data.chosenLocation.formattedAddress);
-    const street = data.chosenLocation.street;
-    const city = data.chosenLocation.city;
-    const state = data.chosenLocation.state;
-    const zipcode = data.chosenLocation.zipcode;
-    console.log(street);
-    console.log(city);
-    console.log(state);
-    console.log(zipcode);
+    console.log(data)
+    // create_elements(data.realtor);
+    if (search_result.slice(-1) === 'X') {
+      $.get(`/api/rentals/${search_result}`).then(function (result) {
+        const data = result;
+        console.log(data)
+        create_elements(data.realtor);
+      });
+    }
+
   });
 
 };
@@ -65,22 +55,6 @@ function showPosition(position) {
   // return [lat, lon];
   get_search_result(lat_long)
   // get_city_from_coord(lat, lon);
-}
-
-function get_city_from_coord(lat, lon) {
-  var search_city = search_city;
-  var queryURL = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + lat + "&lon=" + lon;
-  // print(queryURL);
-
-  $.ajax({ url: queryURL, method: "GET" }).then(function (response) {
-    var city = response.address.city;
-    var state = response.address.state;
-    const search = city + " " + state;
-    // console.log(search);
-    parse_address(search);
-    L.mapquest.geocoding().geocode(search, createMap);
-
-  });
 }
 
 const create_elements = (data) => {
@@ -229,13 +203,6 @@ $(document).on("click", "#search_results", function () {
 
 
 });
-
-// $(document).on("click", ".leaflet-popup", function () {
-//     // If you are on the meals.html page
-//     const address = $(this).text();
-//     console.log(address);
-//     // L.popup().setLatLng(e.latlng).openOn(this);
-//     // L.mapquest.geocoding().reverse(address, generatePopupContent);
 
 
 // });
