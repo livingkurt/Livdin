@@ -31,8 +31,6 @@ const parse_address = (search_result) => {
 
 };
 
-
-
 // Ask User if you can recieve location information
 function getLocation() {
   // Make sure browser supports this feature
@@ -118,13 +116,15 @@ const createMap = (error, response) => {
   // generatePopupContent(error, response, popup);
   const generatePopupContent = (error, response) => {
     var location = response.results[0].locations[0];
+    console.log(location)
     // var street = location.latitude;
     // var street = location.log;
     var street = location.street;
 
     var city = location.adminArea5;
     var state = location.adminArea3;
-    popup.setContent(`${street}, ${city}, ${state} <p><a href="/write-review/${street}, ${city}, ${state}" id="write_rev" >Write Review</a></p> <p><a href="/get-review/${street}, ${city}, ${state}" >Get Review</a></p>`);
+    var zipcode = location.postalCode.slice(0, 5);
+    popup.setContent(`${street}, ${city}, ${state} ${zipcode} <p><a href="/write-review/${street}, ${city}, ${state} ${zipcode}" id="write_rev" >Write Review</a></p> <p><a href="/get-review/${street}, ${city}, ${state} ${zipcode}" >Get Review</a></p>`);
   };
 
   var pathArray = window.location.pathname.split("/");
