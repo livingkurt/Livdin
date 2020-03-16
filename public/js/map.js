@@ -5,29 +5,31 @@ const search_i_e = $("#search_i_map");
 const search_form_f_e = $("#search_form_f_map");
 const checkbox = $("#slider_container_div_m")
 const map_container_e = $("#search_box_results");
+let search_result = "";
+let new_address = "";
 
 let on_off = 0;
 
-const parse_address = (search_result) => {
+const get_rentals = (search_result) => {
   // console.log(search_result.slice(0, -1));
   if (search_result.slice(-1) === '&') {
     checkbox.attr("style", "display: none");
   }
 
 
-  $.get(`/api/parse/${search_result}`).then(function (result) {
-    const data = result;
-    console.log(data)
-    // create_elements(data.realtor);
-    if (search_result.slice(-1) === 'X') {
-      $.get(`/api/rentals/${search_result}`).then(function (result) {
-        const data = result;
-        console.log(data)
-        create_elements(data.realtor);
-      });
-    }
+  // $.get(`/api/parse/${search_result}`).then(function (result) {
+  //   // const data = result;
+  //   // console.log(data)
+  //   // create_elements(data.realtor);
+  if (search_result.slice(-1) === 'X') {
+    $.get(`/api/rentals/${search_result}`).then(function (result) {
+      const data = result;
+      // console.log(data)
+      create_elements(data.realtor);
+    });
+  }
 
-  });
+  // });
 
 };
 
@@ -129,12 +131,20 @@ const createMap = (error, response) => {
 
   var pathArray = window.location.pathname.split("/");
   let search_result = pathArray[2].split("%20").join(" ");
-  // console.log(parse_address(search_result));
+  $.get(`/api/parse/${search_result}`).then(function (result) {
+    const data = result;
+    const street = data.street;
+    const city = data.city;
+    const state = data.state;
+    const zipcode = data.zipcode;
+    new_address = `${street}, ${city}, ${state} ${zipcode.slice(0, 5)}`
+    L.popup({ closeButton: false })
+      .setLatLng(latLng)
+      .setContent(`${new_address} <p><a href="/write-review/${new_address}" id="write_rev"  >Write Review</a></p> <p><a href="/get-review/${new_address}">Get Review</a></p>`)
+      .openOn(map);
 
-  L.popup({ closeButton: false })
-    .setLatLng(latLng)
-    .setContent(`${location.street}, ${location.adminArea5}, ${location.adminArea3} <p><a href="/write-review/${search_result}" id="write_rev"  >Write Review</a></p> <p><a href="/get-review/${search_result}">Get Review</a></p>`)
-    .openOn(map);
+  })
+
 };
 
 
@@ -142,14 +152,16 @@ const createMap = (error, response) => {
 const search = () => {
   var pathArray = window.location.pathname.split("/");
   // console.log(pathArray[2]);
-  let search_result = pathArray[2].split("%20").join(" ");
+  search_result = pathArray[2].split("%20").join(" ");
+  console.log("search map.js")
+  console.log(search_result)
 
   if (search_result === "current_location") {
     getLocation();
   }
   else {
-    parse_address(search_result);
-    L.mapquest.geocoding().geocode(search_result, createMap);
+    get_rentals(search_result);
+    L.mapquest.geocoding().geocode(search_result.slice(0, -1), createMap);
   }
   return search_result;
 };

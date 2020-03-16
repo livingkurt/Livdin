@@ -2,6 +2,7 @@
 var db = require("../models");
 var passport = require("../config/passport");
 const axios = require("axios");
+var addresser = require('addresser')
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -54,40 +55,37 @@ module.exports = function (app) {
   app.get("/api/parse/:search", function (req, res) {
     console.log(req.params.search)
     const search_results = req.params.search.slice(0, -1);
-    const get_rentals = req.params.search.slice(-1);
-    require("dotenv").config();
-    const NodeGeocoder = require("node-geocoder");
+    console.log(addresser.parseAddress("400 South Orange Ave, South Orange , NJ 07079"));
+    // require("dotenv").config();
+    // const NodeGeocoder = require("node-geocoder");
 
-    const options = {
-      provider: process.env.GEOCODER_PROVIDER,
-      // Optional depending on the providers
-      httpAdapter: "https", // Default
-      apiKey: process.env.GEOCODER_API_KEY, // for Mapquest, OpenCage, Google Premier
-      formatter: null // 'gpx', 'string', ...
-    };
-    const geocoder = NodeGeocoder(options);
+    // const options = {
+    //   provider: process.env.GEOCODER_PROVIDER,
+    //   // Optional depending on the providers
+    //   httpAdapter: "https", // Default
+    //   apiKey: process.env.GEOCODER_API_KEY, // for Mapquest, OpenCage, Google Premier
+    //   formatter: null // 'gpx', 'string', ...
+    // };
+    // const geocoder = NodeGeocoder(options);
 
-    const parse_address = () => {
-      geocoder.geocode(search_results)
-        .then(function (data) {
-          var chosenLocation = {
-            formattedAddress: data[0].formattedAddress,
-            longitude: data[0].longitude,
-            latitude: data[0].latitude,
-            street: data[0].streetName,
-            city: data[0].city,
-            state: data[0].stateCode,
-            zipcode: data[0].zipcode
-          };
-          res.json(chosenLocation);
-          // if (get_rentals === '&') {
-          //   res.json(chosenLocation);
-          // }
-          return chosenLocation;
-
-        })
-    }
-    parse_address(search_results);
+    // const parse_address = () => {
+    //   geocoder.geocode(search_results)
+    //     .then(function (data) {
+    //       var chosenLocation = {
+    //         formattedAddress: data[0].formattedAddress,
+    //         longitude: data[0].longitude,
+    //         latitude: data[0].latitude,
+    //         street: data[0].streetName,
+    //         city: data[0].city,
+    //         state: data[0].stateCode,
+    //         zipcode: data[0].zipcode
+    //       };
+    //       console.log("api-routes")
+    //       console.log(chosenLocation)
+    //       res.json(chosenLocation);
+    //     })
+    // }
+    // parse_address(search_results);
 
   })
   app.get("/api/rentals/:search", function (req, res) {

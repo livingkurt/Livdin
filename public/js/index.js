@@ -26,8 +26,10 @@ $(document).ready(function () {
 });
 
 const get_search_result = () => {
-  let search_result = search_i_e.val();
-  console.log(on_off)
+  let search_result = search_i_e.val().trim();
+  // console.log(on_off)
+  console.log("index.js")
+  console.log(search_result)
   window.open(`/map/${search_result}${on_off}`, "_self");
 };
 
